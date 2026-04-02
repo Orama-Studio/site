@@ -1,0 +1,17 @@
+<span class="mb-6 mt-6" id="services"></span>
+<section class="has-background-black pt-3 mt-6 mb-6">
+  <p
+    class="is-size-1 pr-6 pl-6 pb-3 is-size-3-mobile has-text-weight-extrabold condensed is-uppercase"
+    style="margin-top: 6rem !important"
+  >
+    Il cosa.
+  </p>
+  <p class="is-size-3 is-size-4-mobile mb-6 pl-6 pr-6 section-subtitle">
+    Ogni contesto è un racconto da costruire con lo stesso standard estetico e narrativo. Raccontiamo
+    identità e visioni in contesti diversi: aziende e brand, eventi e spettacoli dal vivo, musica e
+    videoclip, cinema e documentari, formazione e live streaming.
+  </p>
+  <div class="grid is-gap-2 is-centered is-col-min-18 pl-0 pr-0 pt-4 pb-4 has-background-black-ter">
+    {{ range site.Data.products.items }} {{ partial "product_card" . }} {{ end }}
+  </div>
+</section>

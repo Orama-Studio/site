@@ -1,0 +1,17 @@
+<div class="cell service-card has-text-light-grey">
+  <div class="service-card__bg">
+    <img class="sat-50 o-50" src="/images/{{ .image }}" alt="immagine servizio" />
+  </div>
+  <div class="service-card__title is-size-3 is-size-4-mobile p-0">
+    <p class="p-1 has-text-warning has-background-black-bis">
+      <a class="button has-text-weight-normal is-size-3 has-text-warning lh-0 b-0 p-3" href="{{ .link }}">
+        <i class="bi bi-arrow-up-right-square-fill pr-3"></i>
+        {{ .title }}
+      </a>
+    </p>
+  </div>
+  <div class="service-card__body is-size-5 p-3 pt-5">
+    <h3 class="has-text-white has-text-weight-bold">{{ .subtitle }}.</h3>
+    <p class="pt-4 pb-2">{{ .phrase }}</p>
+  </div>
+</div>

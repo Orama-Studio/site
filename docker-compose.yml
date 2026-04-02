@@ -1,0 +1,12 @@
+services:
+  hugo:
+    build: .
+    ports:
+      - "1313:1313"
+    volumes:
+      - .:/src
+      - node_modules:/src/node_modules
+    command: hugo server --bind 0.0.0.0 --baseURL http://localhost:1313 --appendPort=false --disableFastRender --poll 1s
+
+volumes:
+  node_modules:

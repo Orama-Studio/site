@@ -1,0 +1,36 @@
+<span class="mb-6 mt-6" id="services"></span>
+<section class="has-background-black pt-3 mt-6 mb-6">
+  <p
+    class="is-size-1 pb-3 is-size-3-mobile has-text-weight-extrabold condensed is-uppercase"
+    style="margin-top: 6rem !important"
+  >
+    Servizi.
+  </p>
+  <p class="is-size-3 is-size-4-mobile mb-4 section-subtitle">
+    Ogni contesto è un racconto da costruire con lo stesso standard estetico e narrativo. Raccontiamo
+    identità e visioni in contesti diversi: aziende e brand, eventi e spettacoli dal vivo, musica e
+    videoclip, cinema e documentari, formazione e live streaming.
+  </p>
+  <div class="carousel" data-interval="5000">
+    <div class="carousel-inner">
+      {{ range site.Data.products.items }}
+      <div class="carousel-item">
+        <p class="is-size-3 is-size-4-mobile p-4 has-text-warning has-text-weight-bold has-text-right">
+          {{ .title }}
+        </p>
+        <a href="{{ .link }}">
+          <img src="/images/{{ .image }}" alt="immagine prodotto" class="sat-30" />
+        </a>
+      </div>
+      {{ end }}
+    </div>
+    <button class="carousel-control prev is-size-1 has-text-weight-extrabold has-text-grey-light">
+      <i class="bi bi-arrow-left-circle-fill"></i>
+    </button>
+    <button class="carousel-control next is-size-1 has-text-weight-extrabold has-text-grey-light">
+      <i class="bi bi-arrow-right-circle-fill"></i>
+      <!--&#8250;-->
+    </button>
+    <div class="carousel-indicators"></div>
+  </div>
+</section>

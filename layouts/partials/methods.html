@@ -1,0 +1,21 @@
+<span class="mt-6" id="method"></span>
+<section class="has-background-black pt-3 mt-6">
+  <p
+    class="is-size-1 pb-3 is-size-3-mobile has-text-weight-extrabold condensed is-uppercase"
+    style="margin-top: 6rem !important"
+  >
+    Metodo.
+  </p>
+  <p class="is-size-3 is-size-4-mobile mb-6 section-subtitle">
+    Qualunque sia la tua visione, il metodo resta lo stesso: cura artigianale, precisione tecnica e
+    sensibilità cinematografica
+    <a
+      class="has-text-weight-bold has-text-warning is-underlined js-modal-trigger"
+      data-target="method-modal"
+    >
+      in ogni fase del lavoro.
+    </a>
+  </p>
+  {{ range site.Data.methods.items }} {{ partial "method_card" . }} {{ end }}
+</section>
+{{ partial "phases" }}

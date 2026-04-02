@@ -1,0 +1,11 @@
+baseURL = "https://Orama-Studio.github.io/site/"
+languageCode = "en-us"
+title = "Orama"
+
+[[module.mounts]]
+  source = "assets"
+  target = "assets"
+
+[[module.mounts]]
+  source = "node_modules"
+  target = "assets/node_modules"

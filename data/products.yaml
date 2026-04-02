@@ -1,0 +1,43 @@
+items:
+  - title: "corti e documentari"
+    subtitle: "Dove c'è una storia, c'è un film."
+    image: "servizi_corti.jpg"
+    link: "corti-e-documentari"
+    phrase: >
+      Corti, documentari e branded short film. Racconti autentici
+      per festival, rassegne e piattaforme digitali.
+  - title: "videoclip"
+    subtitle: "La tua musica in linguaggio cinematografico."
+    image: "servizi_videoclip.jpg"
+    link: "videoclip"
+    phrase: >
+      Videoclip che amplificano la tua identità artistica, tra ritmo,
+      colore e narrazione visiva.
+  - title: "live streaming"
+    subtitle: "L’energia del tuo evento, in tempo reale."
+    image: "servizi_streaming.jpg"
+    link: "live-streaming"
+    phrase: >
+      Dirette streaming con una regia solida e continuità di visione
+      anche multicamera.
+  - title: "eventi e spettacoli"
+    subtitle: "Dal live al racconto."
+    image: "servizi_eventi.jpg"
+    link: "eventi-e-spettacoli"
+    phrase: >
+      Riprese multicamera, trailer e aftermovie per trasformare ogni
+      evento in memoria visiva.
+  - title: "video aziendali"
+    subtitle: "Identità che parla per immagini."
+    image: "servizi_video-aziendali.jpg"
+    link: "video-aziendali"
+    phrase: >
+      Video aziendali e spot cinematografici per raccontare chi sei,
+      con luce, ritmo e autenticità.
+  - title: "formazione"
+    subtitle: "Conoscenza chiara in linguaggio visivo."
+    image: "servizi_video-formazione.jpg"
+    link: "video-formazione"
+    phrase: >
+      Video corsi e tutorial con una struttura didattica curata per
+      rendere la formazione più chiara e coinvolgente.

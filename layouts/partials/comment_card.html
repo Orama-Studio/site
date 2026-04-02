@@ -1,0 +1,26 @@
+<div class="card has-background-grey-lighter customer-card">
+  <div class="card-content">
+    <p class="customer-comment is-size-4 has-text-weight-light">
+      <span class="is-size-3">&ldquo;</span>
+        {{ .phrase }}
+      <span class="is-size-3">&bdquo;</span>
+    </p>
+    <p class="subtitle">
+      <div class="media">
+        <div class="media-left">
+          <figure class="image is-48x48">
+            <img
+              src="/images/{{ .image }}"
+              class="is-rounded"
+              alt="Placeholder image"
+            />
+          </figure>
+        </div>
+        <div class="media-content">
+          <p class="title is-size-4 has-text-weight-bold">{{ .author }}</p>
+          <p class="subtitle is-size-0">{{ .role }} </p>
+        </div>
+      </div>
+    </p>
+  </div>
+</div>

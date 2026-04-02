@@ -1,0 +1,32 @@
+<span class="mt-6" id="method"></span>
+<section class="has-background-black pb-4 pt-4">
+  <div class="columns" id="comments-grid">
+    <div class="column" id="col-1">
+      {{ range site.Data.comments.items }} {{ partial "comment_card" . }} {{ end }}
+    </div>
+    <div class="column" id="col-2">
+      {{ range site.Data.comments.items }} {{ partial "comment_card" . }} {{ end }}
+    </div>
+  </div>
+</section>
+<script>
+  (function () {
+    const col1 = document.getElementById("col-1");
+    const col2 = document.getElementById("col-2");
+    const cards1 = Array.from(col1.children);
+    const cards2 = Array.from(col2.children);
+
+    cards1.forEach((c) => (c.style.display = "none"));
+    cards2.forEach((c) => (c.style.display = "none"));
+
+    while (true) {
+      rand1 = Math.round(Math.random() * 100) % cards1.length;
+      rand2 = Math.round(Math.random() * 100) % cards2.length;
+      if (rand1 != rand2) {
+        cards1[rand1].style.display = "";
+        cards2[rand2].style.display = "";
+        break;
+      }
+    }
+  })();
+</script>

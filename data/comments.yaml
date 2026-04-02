@@ -1,0 +1,63 @@
+items:
+  - author: "Diego Tigrotto"
+    role: "Regista"
+    image: "diego-tigrotto.png"
+    phrase: >
+      Una produzione capace di affrontare un progetto delicato
+      con misura e consapevolezza, sempre in dialogo con la regia
+      per controllo dell'immagine e rispetto della visione, senza forzature
+  - author: "Etta Politico"
+    role: "Presidente - Serendippo"
+    image: "serendippo.png"
+    phrase: >
+      Orama ha saputo ascoltare e riorganizzare il racconto senza semplificarlo,
+      mantenendo uno sguardo autonomo e rispettoso del reale in un percorso
+      condiviso, costruito passo dopo passo
+  - author: "Alfonso Pecoraro Scanio"
+    role: "Presidente - Fondazione UniVerde"
+    image: "pecoraro-scanio.jpg"
+    phrase: >
+      Ho riscontrato un approccio attento alla chiarezza dei contenuti e capacità
+      di operare in contesti istituzionali, nel rispetto del linguaggio e del ruolo pubblico
+  - author: "Danilo Del Bosco"
+    role: "CEO - Promos Comunicazione"
+    image: "promos-comunicazione.jpg"
+    phrase: >
+      Abbiamo trovato un interlocutore capace di leggere la visione di un’agenzia
+      e tradurla in contenuti video coerenti, mantenendo chiarezza di messaggio
+      anche su progetti articolati
+  - author: "Marco Seri"
+    role: "Direttore tecnico - Quelli che ballano"
+    image: "quelli-che-ballano.jpg"
+    phrase: >
+      Durante gli spettacoli dal vivo è essenziale poter contare su una presenza
+      concentrata su ciò che accade in scena. Con Orama Studio lavoriamo da anni
+      con precisione e tranquillità
+  - author: "Michele Moi"
+    role: "Presidente – Roerso Mondo"
+    image: "michele-moi.jpg"
+    phrase: >
+      Nel racconto degli eventi Orama Studio riesce a cogliere ciò che accade senza
+      forzarlo. I video nascono dall’esperienza vissuta sul campo e restituiscono
+      l’atmosfera con naturalezza
+  - author: "Fabrizio Fazio"
+    role: "Regista - Vision Studio"
+    image: "fabrizio-fazio.jpg"
+    phrase: >
+      Orama lavora sul set con una sensibilità fotografica attenta al linguaggio
+      cinematografico e al ritmo della musica. Il dialogo con la regia è sempre fluido,
+      mantenendo equilibrio tra precisione tecnica ed esigenza espressiva
+  - author: "Ombretta Fontanini"
+    role: "Formatrice – Akademy World"
+    image: "akademy.jpg"
+    phrase: >
+      Nel corso dei percorsi formativi Orama ha lavorato con attenzione e continuità,
+      registrando le lezioni in modo chiaro e rispettoso del ritmo dell’aula. La sua
+      presenza è sempre stata naturale e misurata, fin dal primo giorno
+  - author: "Laura Pierallini"
+    role: "Fondatrice – Studio Pierallini"
+    image: "laura-pierallini.jpg"
+    phrase: >
+      Nelle dirette è fondamentale che tutto funzioni senza distrazioni. Con Orama Studio
+      abbiamo trovato un partner capace di garantire continuità e chiarezza, anche in
+      situazioni complesse con discrezione e attenzione costanti al contenuto
