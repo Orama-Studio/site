@@ -1,12 +1,9 @@
 {{ $data := index site.Data . }} {{ with index $data 0 }}
-<p
-  class="is-size-1 is-size-3-mobile pt-6 lh-0 has-text-weight-extrabold condensed"
-  style="margin-top: 6rem !important"
->
-  {{ .title }}
-</p>
-<p class="p-0 mt-5 has-text-white is-size-3 is-size-mobile-3 shorts-title">{{ .subtitle }}</p>
-<video playsinline loop muted autoplay class="mt-4 mb-4">
-  <source src="{{ .video_url }}" type="{{ .video_format }}" />
-</video>
+<p class="is-size-1 is-size-3-mobile mt-3 lh-2 has-text-weight-extrabold condensed">{{ .title }}</p>
+<section class="hero mt-5 mb-5">
+  <video playsinline loop muted autoplay>
+    <source src="{{ .video_url }}" type="{{ .video_format }}" />
+  </video>
+</section>
+<p class="p-0 mt-5 has-text-white is-size-3 is-size-4-mobile service-subtitle">{{ .subtitle }}</p>
 {{ end }}
