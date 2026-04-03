@@ -9,13 +9,13 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     {{ $opts := dict "transpiler" "dartsass" }}
-    {{ $style := resources.Get "scss/style.scss" | toCSS $opts
-    }}
+    {{ $style := resources.Get "scss/style.scss" | toCSS $opts }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
     {{ with resources.Get "js/main.js" }}
-    <script src="{{ .RelPermalink }}"></script>
-    {{ end }} {{ with resources.Get "js/carousel.js" }}
-    <script src="{{ .RelPermalink }}"></script>
+      <script src="{{ .RelPermalink }}"></script>
+    {{ end }}
+    {{ with resources.Get "js/carousel.js" }}
+      <script src="{{ .RelPermalink }}"></script>
     {{ end }}
   </head>
   <body>

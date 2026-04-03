@@ -1,5 +1,5 @@
 baseURL = "https://Orama-Studio.github.io/site/"
-languageCode = "en-us"
+languageCode = "it-it"
 title = "Orama"
 
 [[module.mounts]]

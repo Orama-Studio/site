@@ -62,6 +62,20 @@ div.narrowed {
   }
 }
 
+#splash-word {
+  color: white;
+  animation: 2s ease-in 0s infinite alternate glow;
+}
+
+@keyframes glow {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.75;
+  }
+}
+
 #forma-word {
   margin-bottom: 0.15em;
   transition: opacity 1s ease;
