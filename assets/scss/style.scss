@@ -66,19 +66,19 @@ div.narrowed {
 }
 
 #splash-word {
-  /* color: white; */
-  animation: 2s ease-in 0s infinite alternate glow;
+  color: white;
+  animation: 2s ease-in 1 normal glow;
 }
 
 @keyframes glow {
   from {
-    opacity: 1;
-    color: white;
+    opacity: 0.85;
+    color: #aaa;
     /* text-shadow: 0; */
   }
   to {
-    opacity: 0.85;
-    color: #ddd;
+    opacity: 1;
+    color: #fff;
     /* text-shadow: 1px 1px 1px #ddd; */
   }
 }
