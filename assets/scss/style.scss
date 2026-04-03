@@ -63,16 +63,18 @@ div.narrowed {
 }
 
 #splash-word {
-  color: white;
+  /* color: white; */
   animation: 2s ease-in 0s infinite alternate glow;
 }
 
 @keyframes glow {
   from {
     opacity: 1;
+    color: white;
   }
   to {
-    opacity: 0.75;
+    opacity: 0.85;
+    color: #ddd;
   }
 }
 
@@ -222,6 +224,11 @@ img.rounded {
   height: 4rem;
 }
 
+.service-video {
+  border-top: 2px solid #eee;
+  border-bottom: 2px solid #eee;
+}
+
 .service-card {
   position: relative;
   padding: 0;
@@ -271,8 +278,9 @@ img.rounded {
 }
 
 .service-subtitle {
-  line-height: 2rem;
+  line-height: 1.6rem;
   letter-spacing: -0.1rem;
+  margin: 6rem 0 0 0;
 }
 
 .shorts-title {

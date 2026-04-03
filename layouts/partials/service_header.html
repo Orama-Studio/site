@@ -1,9 +1,9 @@
 {{ $data := index site.Data . }} {{ with index $data 0 }}
 <p class="is-size-1 is-size-3-mobile mt-3 lh-2 has-text-weight-extrabold condensed">{{ .title }}</p>
-<section class="hero mt-5 mb-5">
+<section class="hero mt-5 mb-5 service-video">
   <video playsinline loop muted autoplay>
     <source src="{{ .video_url }}" type="{{ .video_format }}" />
   </video>
 </section>
-<p class="p-0 mt-5 has-text-white is-size-3 is-size-4-mobile service-subtitle">{{ .subtitle }}</p>
+<p class="has-text-white is-size-3 is-size-4-mobile service-subtitle">{{ .subtitle }}</p>
 {{ end }}
