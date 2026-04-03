@@ -18,7 +18,7 @@
       <script src="{{ .RelPermalink }}"></script>
     {{ end }}
   </head>
-  <body>
+  <body data-base="{{ "" | relURL }}">
     {{ block "header" . }} {{ partial "navbar" }} {{ end }}
     <main>{{ block "main" . }}{{ end }}</main>
     {{ block "footer" . }} {{ partial "footer" }} {{ end }}

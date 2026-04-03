@@ -78,7 +78,8 @@ document.addEventListener("DOMContentLoaded", () => {
           menu?.classList.remove("is-active");
         }
       } else {
-        window.location.href = "/#" + targetId;
+        const base = document.body.dataset.base || "/";
+        window.location.href = base + "#" + targetId;
       }
     });
   });
