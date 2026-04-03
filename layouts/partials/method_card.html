@@ -1,6 +1,6 @@
 <div class="columns has-background-black-bis m-0 p-0">
   <div class="column">
-    <img src="/images/{{ .image }}" class="sat-30 method-image" alt="immagine metodo" />
+    <img src="{{ printf "images/%s" .image | relURL }}" class="sat-30 method-image" alt="immagine metodo" />
   </div>
   <div class="column is-three-fifths pt-0">
     <p class="is-size-3 has-text-weight-semibold has-text-left method-title">{{ .title }}</p>

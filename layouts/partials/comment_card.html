@@ -10,7 +10,7 @@
         <div class="media-left">
           <figure class="image is-48x48">
             <img
-              src="/images/{{ .image }}"
+              src="{{ printf "images/%s" .image | relURL }}"
               class="is-rounded"
               alt="Placeholder image"
             />

@@ -19,7 +19,7 @@
           {{ .title }}
         </p>
         <a href="{{ .link }}">
-          <img src="/images/{{ .image }}" alt="immagine prodotto" class="sat-30" />
+          <img src="{{ printf "images/%s" .image | relURL }}" alt="immagine prodotto" class="sat-30" />
         </a>
       </div>
       {{ end }}
