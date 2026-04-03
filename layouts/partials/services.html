@@ -18,7 +18,7 @@
         <p class="is-size-3 is-size-4-mobile p-4 has-text-warning has-text-weight-bold has-text-right">
           {{ .title }}
         </p>
-        <a href="{{ .link }}">
+        <a href="{{ .link | relURL }}">
           <img src="{{ printf "images/%s" .image | relURL }}" alt="immagine prodotto" class="sat-30" />
         </a>
       </div>
