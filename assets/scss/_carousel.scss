@@ -4,6 +4,7 @@
 }
 
 .carousel-inner {
+  height: 40vh !important;
   display: flex;
   transition: transform 0.5s ease;
 }
@@ -18,7 +19,8 @@
 
 .carousel-item img {
   width: 100%;
-  height: 50vh;
+  height: 100%;
+  /* height: 50vh; */
   object-fit: cover;
   object-position: center;
   display: block;
@@ -26,10 +28,10 @@
 
 .carousel-control {
   position: absolute;
-  top: 95%;
+  top: 93%;
   transform: translateY(-50%);
-  /* background: rgba(0, 0, 0, 0.5); */
-  background: black;
+  background: rgba(0, 0, 0, 0.75);
+  /* background: black; */
   color: white;
   border: none;
   /* border-radius: 1rem; */
