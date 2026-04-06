@@ -1,3 +1,5 @@
+document.documentElement.style.setProperty("--vh", `${window.innerHeight * 0.01}px`);
+
 document.addEventListener("DOMContentLoaded", () => {
   // Get all "navbar-burger" elements
   const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"), 0);
