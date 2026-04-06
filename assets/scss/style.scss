@@ -16,7 +16,6 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-  /* font-weight: 100; */
   -ms-overflow-style: none; /* IE and Edge */
   background-color: black;
 }
@@ -66,20 +65,17 @@ div.narrowed {
 }
 
 #splash-word {
-  color: white;
-  animation: 2s ease-in 1 normal glow;
+  color: #fff;
+  opacity: 0.75;
+  animation: 3s ease-out infinite normal glow;
 }
 
 @keyframes glow {
-  from {
-    opacity: 0.85;
-    color: #aaa;
-    /* text-shadow: 0; */
-  }
-  to {
+  50% {
     opacity: 1;
-    color: #fff;
-    /* text-shadow: 1px 1px 1px #ddd; */
+  }
+  100% {
+    opacity: 0.75;
   }
 }
 
@@ -167,8 +163,12 @@ div.narrowed {
 }
 
 .section-subtitle {
-  line-height: 2rem;
-  font-weight: 100;
+  /* color: white; */
+  line-height: 2.6rem;
+  font-weight: normal;
+  @include mixins.until(768px) {
+    line-height: 2rem;
+  }
 }
 
 .condensed {
@@ -235,7 +235,7 @@ img.rounded {
   height: 4rem;
 }
 
-.service-video {
+.service-splash {
   border-top: 8px solid #222;
   border-bottom: 8px solid #222;
 }

@@ -11,13 +11,13 @@
     identità e visioni in contesti diversi: aziende e brand, eventi e spettacoli dal vivo, musica e
     videoclip, cinema e documentari, formazione e live streaming.
   </p>
-  <div class="carousel" data-interval="5000">
+  <div class="carousel mt-5" data-interval="5000">
     <div class="carousel-inner">
       {{ range site.Data.services.items }}
-      <div class="carousel-item">
-        <p class="is-size-3 is-size-4-mobile p-4 has-text-warning has-text-weight-bold has-text-right">
+      <div class="carousel-item has-text-right">
+        <a href="{{ .link | relURL }}" class="is-size-3 is-size-4-mobile p-4 has-text-warning has-text-weight-bold ">
           {{ .title }}
-        </p>
+        </a>
         <a href="{{ .link | relURL }}">
           <img src="{{ printf "images/%s" .image | relURL }}" alt="immagine prodotto" class="sat-30" />
         </a>
