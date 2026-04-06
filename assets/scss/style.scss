@@ -53,7 +53,7 @@ div.narrowed {
 .portfolio-card {
   position: relative;
   overflow: hidden;
-  height: 30vh !important;
+  height: 30svh !important;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -64,7 +64,7 @@ div.narrowed {
   top: 0;
   left: 0;
   width: 100%;
-  /* height: 75vh !important; */
+  /* height: 75svh !important; */
   object-fit: cover;
   object-position: center;
   display: block;
@@ -100,7 +100,7 @@ div.narrowed {
 .splash {
   position: relative;
   overflow: hidden;
-  height: 100vh !important;
+  height: 100svh !important;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -112,7 +112,7 @@ div.narrowed {
   /* top: -3rem; */
   left: 0;
   width: 100%;
-  height: 75vh !important;
+  height: 75svh !important;
   object-fit: cover;
   object-position: center;
   display: block;
@@ -123,7 +123,7 @@ div.narrowed {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 25vh !important;
+  height: 25svh !important;
   width: 100%;
   object-position: center;
   display: flex;
