@@ -1,9 +1,11 @@
 {{ range .items }}
 <!--<div class="column is-one-third-desktop is-half-tablet">-->
 <div class="cell portfolio-card">
-  <video playsinline loop muted autoplay class="portfolio-video">
-    <source src="{{ .video_url | relURL }}" type="{{ .video_format }}" />
-  </video>
+  <a href="{{ .video_url | relURL }}">
+    <video playsinline loop muted autoplay class="portfolio-video">
+      <source src="{{ .video_url | relURL }}" type="{{ .video_format }}" />
+    </video>
+  </a>
   <div class="portfolio-details has-background-black-bis has-text-white has-text-weight-bold p-2">
     <p class="is-size-5">{{ .title }}</p>
     <p class="is-size-6">{{ .subtitle | default "-" }}</p>
