@@ -90,11 +90,11 @@ div.narrowed {
 #splash-word {
   color: #fff;
   opacity: 0.75;
-  animation: 3s ease-out infinite normal glow;
+  animation: 4s ease-out infinite normal glow;
 }
 
 @keyframes glow {
-  50% {
+  25% {
     opacity: 1;
   }
   100% {
@@ -113,7 +113,7 @@ div.narrowed {
 
 .splash-video {
   position: absolute;
-  top: 0;
+  top: 1rem;
   left: 0;
   width: 100%;
   height: calc(var(--vh, 1vh) * 75) !important;
