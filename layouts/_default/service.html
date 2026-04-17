@@ -1,7 +1,8 @@
 {{ define "main" }}
 <div class="narrowed">
   <div class="page">{{ partial "service_splash" .Params.data_source }} {{ .Content }}</div>
-  <div class="grid mt-6 mb-6">
+  <div class="fixed-grid has-1-cols-mobile has-3-cols-tablet mt-6 mb-6">
+  <div class="grid">
     {{ with .Params.reels }}
       {{ with index site.Data.reels . }}
         {{ range . }}
@@ -9,6 +10,7 @@
         {{ end }}
       {{ end }}
     {{ end }}
+  </div>
   </div>
   {{ partial "product_card" . }}
 </div>

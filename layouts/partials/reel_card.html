@@ -1,6 +1,6 @@
-<div class="cell reel-card is-col-span-12-mobile">
+<div class="cell reel-card">
   <a href="{{ .link | relURL }}">
-    <img class="method-image" src="{{ printf "images/%s" .image | relURL }}"/>
+    <img src="{{ printf "images/%s" .image | relURL }}"/>
   </a>
   <div class="reel-details has-text-white has-background-black-bis has-text-weight-bold">
     <a class="is-size-5 has-text-white" href="{{ .link | relURL }}">
