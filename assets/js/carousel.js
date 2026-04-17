@@ -19,18 +19,14 @@ document.addEventListener("DOMContentLoaded", () => {
     function goTo(index) {
       current = (index + items.length) % items.length;
       inner.style.transform = `translateX(-${current * 100}%)`;
-      indicators.forEach((btn, i) =>
-        btn.classList.toggle("is-active", i === current),
-      );
+      indicators.forEach((btn, i) => btn.classList.toggle("is-active", i === current));
     }
 
     const prev = carousel.querySelector(".carousel-control.prev");
     const next = carousel.querySelector(".carousel-control.next");
     if (prev) prev.addEventListener("click", () => goTo(current - 1));
     if (next) next.addEventListener("click", () => goTo(current + 1));
-    indicators.forEach((btn, i) =>
-      btn.addEventListener("click", () => goTo(i)),
-    );
+    indicators.forEach((btn, i) => btn.addEventListener("click", () => goTo(i)));
 
     goTo(0);
 
@@ -43,14 +39,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     let touchStartX = 0;
-    carousel.addEventListener("touchstart", (e) => {
-      touchStartX = e.touches[0].clientX;
-      clearInterval(timer);
-    }, { passive: true });
+    carousel.addEventListener(
+      "touchstart",
+      (e) => {
+        touchStartX = e.touches[0].clientX;
+        clearInterval(timer);
+      },
+      { passive: true },
+    );
     carousel.addEventListener("touchend", (e) => {
       const diff = touchStartX - e.changedTouches[0].clientX;
       if (Math.abs(diff) > 50) goTo(current + (diff > 0 ? 1 : -1));
-      timer = setInterval(() => goTo(current + 1), delay);
+      // timer = setInterval(() => goTo(current + 1), delay);
     });
   });
 });

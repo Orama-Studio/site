@@ -1,0 +1,32 @@
+aziendali:
+  - title: "video corporate"
+    image: "reel_corporate.jpg"
+    link: "https://www.youtube.com/watch?v=-rAdPakM3kc"
+  - title: "spot promo"
+    image: "reel_spot.jpg"
+    link: "https://www.youtube.com/watch?v=leAATFYj2EE"
+  - title: "eventi aziendali"
+    image: "reel_aziendali.jpg"
+    link: "https://www.youtube.com/watch?v=jqvZrdGm7E0"
+streaming:
+  - title: "streaming multicamera"
+    image: "reel_streaming.jpg"
+    link: "https://www.youtube.com/watch?v=raVNBSiODx4"
+eventi:
+  - title: "multicamera"
+    image: "reel_multicamera.jpg"
+    link: "https://www.youtube.com/watch?v=1kOnu9U_b8E"
+  - title: "aftermovie"
+    image: "reel_aftermovie.jpg"
+    link: "https://www.youtube.com/watch?v=Fw9pHbvKy_Y"
+  - title: "trailer"
+    image: "reel_trailer.jpg"
+    link: "https://www.youtube.com/watch?v=MD85IpGMek8"
+videoclip:
+  - title: "reel"
+    image: "reel_videoclip.jpg"
+    link: "https://www.youtube.com/watch?v=pX-wbQEyurE"
+formazione:
+  - title: "seminari e workshop"
+    image: "reel_formazione.jpg"
+    link: "https://www.youtube.com/watch?v=8D-puJi1XoU"

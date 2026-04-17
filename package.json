@@ -2,6 +2,7 @@
   "name": "orama-site",
   "private": true,
   "dependencies": {
-    "bulma": "^1.0.0"
+    "bulma": "^1.0.0",
+    "pi-acp": "^0.0.25"
   }
 }

@@ -1,0 +1,38 @@
+{
+  "version": "5",
+  "specifiers": {
+    "npm:bulma@1": "1.0.4",
+    "npm:pi-acp@*": "0.0.25",
+    "npm:pi-acp@^0.0.25": "0.0.25"
+  },
+  "npm": {
+    "@agentclientprotocol/sdk@0.12.0_zod@3.25.76": {
+      "integrity": "sha512-V8uH/KK1t7utqyJmTA7y7DzKu6+jKFIXM+ZVouz8E55j8Ej2RV42rEvPKn3/PpBJlliI5crcGk1qQhZ7VwaepA==",
+      "dependencies": [
+        "zod"
+      ]
+    },
+    "bulma@1.0.4": {
+      "integrity": "sha512-Ffb6YGXDiZYX3cqvSbHWqQ8+LkX6tVoTcZuVB3lm93sbAVXlO0D6QlOTMnV6g18gILpAXqkG2z9hf9z4hCjz2g=="
+    },
+    "pi-acp@0.0.25": {
+      "integrity": "sha512-kJwu06ooAy5tuScyjnWAd/KwiZrjpxDarKf0DKHpifWZHKfdIbdylXaBVLS5ZhczC68MLesn1QObvyxHU0KARQ==",
+      "dependencies": [
+        "@agentclientprotocol/sdk",
+        "zod"
+      ],
+      "bin": true
+    },
+    "zod@3.25.76": {
+      "integrity": "sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ=="
+    }
+  },
+  "workspace": {
+    "packageJson": {
+      "dependencies": [
+        "npm:bulma@1",
+        "npm:pi-acp@^0.0.25"
+      ]
+    }
+  }
+}

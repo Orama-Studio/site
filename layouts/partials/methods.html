@@ -1,16 +1,9 @@
-<p class="anchor" id="metodo"></p>
-<section class="has-background-black">
-  <p class="is-size-1 p-3 is-size-3-mobile has-text-weight-extrabold condensed is-uppercase">Metodo.</p>
-  <p class="is-size-3 p-3 is-size-4-mobile mb-6 section-subtitle">
+<section class="has-background-black-ter" style="margin: 8rem 0 2rem 0;">
+  <p class="is-size-3 p-3 is-size-4-mobile mb-3 section-subtitle">
     Qualunque sia la tua visione, il metodo resta lo stesso: cura artigianale, precisione tecnica e
     sensibilità cinematografica
-    <a
-      class="has-text-weight-bold has-text-warning is-underlined js-modal-trigger"
-      data-target="method-modal"
-    >
+    <a href="{{ "phases" | relURL }}" class="has-text-weight-bold has-text-warning is-underlined js-modal-trigger">
       in ogni fase del lavoro.
     </a>
   </p>
-  {{ range site.Data.methods.items }} {{ partial "method_card" . }} {{ end }}
 </section>
-{{ partial "phases" }}

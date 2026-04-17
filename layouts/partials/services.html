@@ -2,15 +2,14 @@
 <section class="has-background-black">
   <p class="is-size-1 p-3 is-size-3-mobile has-text-weight-extrabold condensed is-uppercase">Servizi.</p>
   <p class="is-size-3 p-3 is-size-4-mobile mb-6 section-subtitle">
-    Ci piace lavorare in contesti diversi. Che siano aziende o brand, eventi o spettacoli dal vivo, musica
-    o videoclip, cinema o documentari, formazione o live streaming, uniamo identità e visione, scegliendo
-    gli standard estetici e narrativi più appropriati.
+    Lavoriamo in ambiti diversi. Che siano eventi, spettacoli, videoclip, progetti cinematografici
+    o contenuti formativi e aziendali, scegliamo ogni volta il linguaggio più adatto alla natura del progetto.
   </p>
   <div class="carousel" data-interval="5000">
     <div class="carousel-inner">
       {{ range site.Data.services.items }}
-      <div class="carousel-item has-text-right">
-        <a href="{{ .link | relURL }}" class="is-size-3 is-size-4-mobile p-4 has-text-warning has-text-weight-bold ">
+      <div class="carousel-item has-background-black-bis">
+        <a href="{{ .link | relURL }}" class="is-size-3 is-size-4-mobile p-3 has-text-warning has-text-weight-bold ">
           {{ .title }}
         </a>
         <a href="{{ .link | relURL }}">

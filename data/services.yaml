@@ -6,27 +6,6 @@ items:
     phrase: >
       Dirette streaming con una regia solida e continuità di visione
       anche multicamera.
-  - title: "videoclip"
-    subtitle: "La tua musica in linguaggio cinematografico."
-    image: "servizi_videoclip.jpg"
-    link: "videoclip"
-    phrase: >
-      Videoclip che amplificano la tua identità artistica, tra ritmo,
-      colore e narrazione visiva.
-  - title: "corti e documentari"
-    subtitle: "Dove c'è una storia, c'è un film."
-    image: "servizi_corti.jpg"
-    link: "corti-e-documentari"
-    phrase: >
-      Corti, documentari e branded short film. Racconti autentici
-      per festival, rassegne e piattaforme digitali.
-  - title: "eventi e spettacoli"
-    subtitle: "Dal live al racconto."
-    image: "servizi_eventi.jpg"
-    link: "eventi-e-spettacoli"
-    phrase: >
-      Riprese multicamera, trailer e aftermovie per trasformare ogni
-      evento in memoria visiva.
   - title: "video aziendali"
     subtitle: "Identità che parla per immagini."
     image: "servizi_video-aziendali.jpg"
@@ -34,7 +13,28 @@ items:
     phrase: >
       Video aziendali e spot cinematografici per raccontare chi sei,
       con luce, ritmo e autenticità.
-  - title: "formazione"
+  - title: "eventi e spettacoli"
+    subtitle: "Dal live al racconto."
+    image: "servizi_eventi.jpg"
+    link: "eventi-e-spettacoli"
+    phrase: >
+      Riprese multicamera, trailer e aftermovie per trasformare ogni
+      evento in memoria visiva.
+  - title: "videoclip musicali"
+    subtitle: "La tua musica in linguaggio cinematografico."
+    image: "servizi_videoclip.jpg"
+    link: "videoclip"
+    phrase: >
+      Videoclip che amplificano la tua identità artistica, tra ritmo,
+      colore e narrazione visiva.
+  - title: "cinema"
+    subtitle: "Dove c'è una storia, c'è un film."
+    image: "servizi_corti.jpg"
+    link: "corti-e-documentari"
+    phrase: >
+      Corti, documentari e branded short film. Racconti autentici
+      per festival, rassegne e piattaforme digitali.
+  - title: "video formativi"
     subtitle: "Conoscenza chiara in linguaggio visivo."
     image: "servizi_video-formazione.jpg"
     link: "video-formazione"
