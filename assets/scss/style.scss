@@ -62,6 +62,11 @@ div.narrowed {
   }
 }
 
+.tag {
+  float: right;
+  text-align: right;
+}
+
 .company-desc {
   @include mixins.from(1024px) {
     padding: 0 2rem;
@@ -362,13 +367,6 @@ img.rounded {
 .offer-title {
   background: black;
   text-align: center;
-}
-
-.offer-body {
-  padding: 0 2.4rem !important;
-  @include mixins.until(768px) {
-    padding: 0 2rem !important;
-  }
 }
 
 .customer-card {

@@ -2,7 +2,14 @@
 <div class="narrowed">
   <div class="page">{{ partial "service_splash" .Params.data_source }} {{ .Content }}</div>
   <div class="grid mt-6 mb-6">
-    {{ with .Params.reels }}{{ with index site.Data.reels . }}{{ range . }}{{ partial "reel_card" . }}{{ end }}{{ end }}{{ end }}
+    {{ with .Params.reels }}
+      {{ with index site.Data.reels . }}
+        {{ range . }}
+          {{ partial "reel_card" . }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
   </div>
+  {{ partial "product_card" . }}
 </div>
 {{ end }}
