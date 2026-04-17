@@ -1,6 +1,6 @@
 {{ range .items }}
 <div class="cell portfolio-card">
-  <a href="{{ .video_url | relURL }}">
+  <a href="{{ .video_link }}">
     <video playsinline loop muted autoplay class="portfolio-video">
       <source src="{{ .video_url | relURL }}" type="{{ .video_format }}" />
     </video>

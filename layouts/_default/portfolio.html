@@ -1,9 +1,7 @@
 {{ define "main" }}
 <section class="has-background-black pt-6 mt-6">
   <div class="fixed-grid has-1-cols-mobile has-2-cols-fullhd">
-    <div class="grid">
-      {{ partial "portfolio_card" (index site.Data .Params.data_source) }}
-    </div>
+    <div class="grid">{{ partial "portfolio_card" (index site.Data .Params.data_source) }}</div>
   </div>
 </section>
 {{ end }}

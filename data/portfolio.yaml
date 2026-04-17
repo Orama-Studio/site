@@ -5,8 +5,8 @@ items:
       - "corto"
       - "finzione"
     video_url: "videos/escluso-il-cane_sfondo.mp4"
-    # video_url: "https://mega.nz/file/6W5nRZrA#rX3vxOcjJGBrgxrI0W7KGgjUkp03Z767ir8q9TaQKic"
     video_format: "video/mp4"
+    video_link: "https://www.youtube.com/watch?v=uqJ7AxooIVA"
   - title: "La Zona"
     subtitle: "teaser documentario"
     tags:
@@ -14,6 +14,7 @@ items:
       - "documentario"
     video_url: "videos/la-zona_sfondo.mp4"
     video_format: "video/mp4"
+    video_link: "https://www.youtube.com/watch?v=wCjwneEmvaU"
   - title: "YooToo Laboratorio Immagine"
     subtitle: "ritratto impresa"
     tags:
@@ -21,6 +22,7 @@ items:
       - "impresa"
     video_url: "videos/youtoo_sfondo.mp4"
     video_format: "video/mp4"
+    video_link: "https://www.youtube.com/watch?v=n6N_RHXSMHQ"
   - title: "Frank Parking"
     subtitle: ""
     tags:
@@ -28,6 +30,7 @@ items:
       - "istituzionale"
     video_url: "videos/frank_sfondo.mp4"
     video_format: "video/mp4"
+    video_link: "https://www.youtube.com/watch?v=MIGZfYQCOIs"
   - title: "Air Law Conf 2024"
     subtitle: "aftermovie evento"
     tags:
@@ -36,6 +39,7 @@ items:
       - "aziendale"
     video_url: "videos/eventi_pierallini_sfondo.mp4"
     video_format: "video/mp4"
+    video_link: "https://www.youtube.com/watch?v=U0a1-0HRdGQ"
   - title: "Quelli che ballano"
     subtitle: "spettacolo multicamera"
     tags:
@@ -43,6 +47,7 @@ items:
       - "multicamera"
     video_url: "videos/quelli-che-ballano_2017_sfondo.mp4"
     video_format: "video/mp4"
+    video_link: "https://www.youtube.com/watch?v=JqwpMAcrNp4"
   - title: "Jula e il drago"
     tags:
       - "spettacolo"
@@ -50,6 +55,7 @@ items:
     subtitle: "Trailer spettacolo"
     video_url: "videos/jula_sfondo.mp4"
     video_format: "video/mp4"
+    video_link: "https://www.youtube.com/watch?v=FNjfTKZJZaU"
   - title: "Silent Sardinia Fest 2025"
     subtitle: "aftermovie evento"
     tags:
@@ -58,6 +64,7 @@ items:
       - "musica"
     video_url: "videos/aftermovie_silent_sfondo.mp4"
     video_format: "video/mp4"
+    video_link: "https://www.youtube.com/watch?v=4AQQrNjyCi4"
   - title: "Embrance"
     subtitle: "videoclip"
     tags:
@@ -65,6 +72,7 @@ items:
       - "musica"
     video_url: "videos/videoclip_embrance_sfondo.mp4"
     video_format: "video/mp4"
+    video_link: "https://www.youtube.com/watch?v=XweOu-BjFcs"
   - title: "Siamo in Italia"
     subtitle: "performance"
     tags:
@@ -73,3 +81,4 @@ items:
       - "performance"
     video_url: "videos/siamo-in-italia_sfondo.mp4"
     video_format: "video/mp4"
+    video_link: "https://www.youtube.com/watch?v=ULr5Q1YBVrA"
