@@ -1,17 +1,21 @@
 {{ define "main" }}
 <div class="narrowed">
-  <div class="page">{{ partial "service_splash" .Params.data_source }} {{ .Content }}</div>
+  <div class="page">
+    {{ partial "service_splash" .Params.data_source }}
+  </div>
+  <div class="mt-6">{{ .Content }}</div>
   <div class="fixed-grid has-1-cols-mobile has-3-cols-tablet mt-6 mb-6">
-  <div class="grid">
-    {{ with .Params.reels }}
-      {{ with index site.Data.reels . }}
-        {{ range . }}
-          {{ partial "reel_card" . }}
+    <div class="grid mb-6">
+      {{ with .Params.reels }}
+        {{ with index site.Data.reels . }}
+          {{ range . }}
+            {{ partial "reel_card" . }}
+          {{ end }}
         {{ end }}
       {{ end }}
-    {{ end }}
+    </div>
   </div>
-  </div>
+  <p class="is-size-2 has-text-centered o-50 mt-6">&#10070;</p>
   {{ partial "product_card" . }}
 </div>
 {{ end }}

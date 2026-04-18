@@ -4,11 +4,11 @@
 }
 
 .carousel-inner {
-  height: calc(var(--vh, 1vh) * 42) !important;
+  height: calc(var(--vh, 1vh) * 48) !important;
   display: flex;
   transition: transform 0.5s ease;
   @include mixins.until(1024px) {
-    height: calc(var(--vh, 1vh) * 36) !important;
+    height: calc(var(--vh, 1vh) * 52) !important;
   }
 }
 
@@ -32,7 +32,6 @@
   position: absolute;
   top: 93%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.75);
   color: white;
   border: none;
   padding: 0.5rem;
@@ -61,12 +60,24 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  border: 2px solid white;
+  /* border: 2px solid white; */
+  border: 2px solid
+    hsl(
+      var(--bulma-warning-h),
+      var(--bulma-warning-s),
+      calc(var(--bulma-warning-l) + var(--bulma-hover-color-l-delta))
+    ) !important;
   background: transparent;
   cursor: pointer;
   padding: 0;
+  margin-bottom: 0.2rem;
 }
 
 .carousel-indicators button.is-active {
-  background: white;
+  /* background: white; */
+  background-color: hsl(
+    var(--bulma-warning-h),
+    var(--bulma-warning-s),
+    calc(var(--bulma-warning-l) + var(--bulma-hover-color-l-delta))
+  ) !important;
 }

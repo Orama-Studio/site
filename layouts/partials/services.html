@@ -5,11 +5,12 @@
     Lavoriamo in ambiti diversi. Che siano eventi, spettacoli, videoclip, progetti cinematografici
     o contenuti formativi e aziendali, scegliamo ogni volta il linguaggio più adatto alla natura del progetto.
   </p>
+  <div class="narrowed">
   <div class="carousel" data-interval="5000">
     <div class="carousel-inner">
       {{ range site.Data.services.items }}
-      <div class="carousel-item has-background-black-bis">
-        <a href="{{ .link | relURL }}" class="is-size-3 is-size-4-mobile p-3 has-text-warning has-text-weight-bold ">
+      <div class="carousel-item has-background-black">
+        <a href="{{ .link | relURL }}" class="is-size-3 is-size-4-mobile has-text-white has-text-weight-bold p-0">
           {{ .title }}
         </a>
         <a href="{{ .link | relURL }}">
@@ -18,12 +19,13 @@
       </div>
       {{ end }}
     </div>
-    <button class="carousel-control prev is-size-1 is-size-3-mobile has-text-weight-extrabold has-text-grey-light">
+    <button class="carousel-control prev is-size-1 is-size-3-mobile has-text-weight-extrabold has-text-warning">
       <i class="bi bi-arrow-left-circle-fill"></i>
     </button>
-    <button class="carousel-control next is-size-1 is-size-3-mobile has-text-weight-extrabold has-text-grey-light">
+    <button class="carousel-control next is-size-1 is-size-3-mobile has-text-weight-extrabold has-text-warning">
       <i class="bi bi-arrow-right-circle-fill"></i>
     </button>
     <div class="carousel-indicators"></div>
+  </div>
   </div>
 </section>

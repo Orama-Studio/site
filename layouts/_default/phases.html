@@ -2,18 +2,21 @@
 <div class="narrowed">
   <div class="page">
     <section class="has-background-black pt-6">
-      <p class="is-size-2 is-size-3-mobile has-text-weight-extrabold condensed">
+      <p class="is-size-2 is-size-3-mobile lh-2 has-text-weight-extrabold condensed">
         Un solo modo di lavorare, quello giusto.
       </p>
-      <p class="pt-4 mb-6 is-size-3 lh-24 has-text-white has-text-weight-light">
-        Qualunque sia la tua visione, il nostro metodo resta lo stesso: cura, precisione e sensibilità
-        cinematografica in ogni fase del lavoro.
-      </p>
-      <div class="fixed-grid has-1-cols">
-        <div class="grid">{{ range site.Data.methods.items }} {{ partial "method_card" . }} {{ end }}</div>
+      <div class="fixed-grid mt-6 has-1-cols">
+        <div class="grid mb-6">
+          {{ range site.Data.methods.items }} {{ partial "method_card" . }} {{ end }}
+        </div>
       </div>
     </section>
-    <section class="has-background-black pt-6">
+    <p class="is-size-2 mt-6 mb-6 has-text-centered o-50">&#10070;</p>
+    <p class="pt-4 mb-6 is-size-3 lh-24 has-text-white has-text-weight-light">
+      Qualunque sia la tua visione, il nostro metodo resta lo stesso: cura, precisione e sensibilità
+      cinematografica in ogni fase del lavoro.
+    </p>
+    <section class="has-background-black mt-6">
       <div class="columns">
         <div class="column">
           <p class="mt-3 is-size-4 has-text-white">
