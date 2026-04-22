@@ -24,6 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function closeModal($el) {
     $el.classList.remove("is-active");
+    const iframe = $el.querySelector("iframe");
+    if (iframe) iframe.src = "";
   }
 
   function closeAllModals() {
@@ -38,6 +40,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const $target = document.getElementById(modal);
 
     $trigger.addEventListener("click", () => {
+      const videoUrl = $trigger.dataset.video;
+      if (videoUrl) {
+        const iframe = $target.querySelector("iframe");
+        if (iframe) {
+          const match = videoUrl.match(/[?&]v=([^&]+)/);
+          iframe.src = match
+            ? "https://www.youtube.com/embed/" + match[1] + "?autoplay=1"
+            : videoUrl;
+        }
+      }
       openModal($target);
     });
   });

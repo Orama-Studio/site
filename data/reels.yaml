@@ -23,7 +23,7 @@ eventi:
     image: "reel_trailer.jpg"
     link: "https://www.youtube.com/watch?v=MD85IpGMek8"
 videoclip:
-  - title: "reel"
+  - title: "showreel"
     image: "reel_videoclip.jpg"
     link: "https://www.youtube.com/watch?v=pX-wbQEyurE"
 formazione:

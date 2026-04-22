@@ -3,11 +3,22 @@
     <img src="{{ printf "images/%s" .image | relURL }}"/>
   </a>
   <div class="reel-details has-text-white has-background-black-bis has-text-weight-bold">
-    <a class="is-size-5 has-text-white" href="{{ .link | relURL }}">
+    <!--<a class="is-size-5 has-text-white" href="{{ .link | relURL }} js-modal-trigger" data-target="playback-modal">-->
+    <a class="is-size-5 has-text-white js-modal-trigger" data-target="playback-modal" data-video="{{ .link }}">
       <p>
         {{ .title }}
         <i class="bi bi-play-circle-fill has-text-warning reel-icon pr-1 is-size-4"></i>
       </p>
     </a>
+  </div>
+</div>
+<div class="modal" id="playback-modal">
+  <div class="modal-background has-background-black-bis"></div>
+  <div class="modal-content p-5">
+    <div class="container">
+      <div class="is-relative" style="padding-bottom:56.25%;height:0;overflow:hidden;">
+        <iframe id="playback-iframe" style="position:absolute;top:0;left:0;width:100%;height:100%;" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
   </div>
 </div>
