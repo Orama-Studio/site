@@ -1,9 +1,37 @@
 {{ $data := index site.Data . }} {{ with index $data 0 }}
-<section class="hero mb-6 service-splash">
-  <video playsinline loop muted autoplay>
+<script>
+  function toggle_mute_icon() {
+    const v = document.getElementById("splash-video");
+    const b = document.getElementById("mute-button");
+    v.muted = !v.muted;
+    b.innerHTML = v.muted ? '<i class="bi bi-volume-mute "></i>' : '<i class="bi bi-volume-up"></i>';
+  }
+</script>
+<section class="hero mb-6 service-splash" style="position: relative">
+  <video id="splash-video" playsinline loop muted autoplay>
     <source src="{{ .video_url }}" type="{{ .video_format }}" />
   </video>
+  <button
+    id="mute-button"
+    class="splash-mute-btn has-text-black has-background-warning"
+    onclick="toggle_mute_icon()"
+    style="
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.6);
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      padding: 0.4rem 0.6rem;
+      border-radius: 50%;
+      cursor: pointer;
+    "
+  >
+    <i class="bi bi-volume-mute"></i>
+  </button>
 </section>
-<p class="is-size-1 is-size-3-mobile has-text-weight-extrabold condensed m-0 p-0">{{ .title }}</p>
+<p class="is-size-1 is-size-3-mobile has-text-weight-extrabold condensed m-0 p-0 mt-4">{{ .title }}</p>
 <p class="has-text-white is-size-3 is-size-4-mobile service-subtitle lh-16">{{ .subtitle }}</p>
 {{ end }}
