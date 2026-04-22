@@ -1,5 +1,8 @@
 <section class=" method-section">
   <p class="is-size-2 mt-6 mb-6 lh-0 has-text-centered o-50 is-clearfix">&#10070;</p>
+  <p class="is-size-2 is-size-3-mobile mt-6 pt-6 lh-2 has-text-weight-extrabold condensed">
+    Un solo modo di lavorare, quello giusto.
+  </p>
   <p class="is-size-3 p-3 is-size-4-mobile section-subtitle method-subtitle">
     Qualunque sia la tua visione, il metodo resta lo stesso: cura artigianale, precisione tecnica e
     sensibilità cinematografica
@@ -7,5 +10,10 @@
       in ogni fase del lavoro.
     </a>
   </p>
+  <div class="fixed-grid has-1-cols">
+    <div class="grid mb-6">
+      {{ range site.Data.methods.items }} {{ partial "method_card" . }} {{ end }}
+    </div>
+  </div>
 </section>
 <p class="is-size-2 has-text-centered o-50">&#10070;</p>
