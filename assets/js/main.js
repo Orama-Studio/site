@@ -96,6 +96,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+const mediaElem = document.querySelector("video");
+mediaElem.load();
+
+function replay_video() {
+  const v = document.getElementsByClassName("replayable-video")[0];
+  if (typeof v !== "undefined") {
+    v.currentTime = 0;
+    v.play();
+  }
+}
 
 function toggle_mute_icon() {
   const v = document.getElementsByClassName("mutable-video")[0];
