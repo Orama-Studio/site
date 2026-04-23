@@ -45,9 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const iframe = $target.querySelector("iframe");
         if (iframe) {
           const match = videoUrl.match(/[?&]v=([^&]+)/);
-          iframe.src = match
-            ? "https://www.youtube.com/embed/" + match[1] + "?autoplay=1"
-            : videoUrl;
+          iframe.src = match ? "https://www.youtube.com/embed/" + match[1] + "?autoplay=1" : videoUrl;
         }
       }
       openModal($target);
@@ -98,5 +96,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+function toggle_mute_icon() {
+  const v = document.getElementsByClassName("mutable-video")[0];
+  if (typeof v !== "undefined") {
+    const b = document.getElementById("mute-button");
+    const icon_on = '<i class="bi bi-volume-mute "></i>';
+    const icon_off = '<i class="bi bi-volume-up"></i>';
+    v.muted = !v.muted;
+    b.innerHTML = v.muted ? icon_on : icon_off;
+  }
+}
 
 console.info("JS loaded!");

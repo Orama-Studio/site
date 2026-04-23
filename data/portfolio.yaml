@@ -1,6 +1,8 @@
 items:
   - title: "Escluso il cane"
     subtitle: "cortometraggio di finzione"
+    service: "cinema"
+    service_link: "corti-e-documentari"
     tags:
       - "corto"
       - "finzione"
@@ -9,6 +11,8 @@ items:
     video_link: "https://www.youtube.com/watch?v=uqJ7AxooIVA"
   - title: "La Zona"
     subtitle: "teaser documentario"
+    service: "cinema"
+    service_link: "corti-e-documentari"
     tags:
       - "teaser"
       - "documentario"
@@ -17,6 +21,8 @@ items:
     video_link: "https://www.youtube.com/watch?v=wCjwneEmvaU"
   - title: "YooToo Laboratorio Immagine"
     subtitle: "ritratto impresa"
+    service: "aziende"
+    service_link: "video-aziendali"
     tags:
       - "corporate"
       - "impresa"
@@ -25,6 +31,8 @@ items:
     video_link: "https://www.youtube.com/watch?v=n6N_RHXSMHQ"
   - title: "Frank Parking"
     subtitle: ""
+    service: "aziende"
+    service_link: "video-aziendali"
     tags:
       - "corporate"
       - "istituzionale"
@@ -33,15 +41,19 @@ items:
     video_link: "https://www.youtube.com/watch?v=MIGZfYQCOIs"
   - title: "Air Law Conf 2024"
     subtitle: "aftermovie evento"
+    service: "aziende"
+    service_link: "video-aziendali"
     tags:
       - "aftermovie"
       - "evento"
-      - "aziendale"
+      - "aziende"
     video_url: "videos/eventi_pierallini_sfondo.mp4"
     video_format: "video/mp4"
     video_link: "https://www.youtube.com/watch?v=U0a1-0HRdGQ"
   - title: "Quelli che ballano"
     subtitle: "spettacolo multicamera"
+    service: "eventi"
+    service_link: "eventi-e-spettacoli"
     tags:
       - "spettacolo"
       - "multicamera"
@@ -49,15 +61,19 @@ items:
     video_format: "video/mp4"
     video_link: "https://www.youtube.com/watch?v=JqwpMAcrNp4"
   - title: "Jula e il drago"
+    subtitle: "Trailer spettacolo"
+    service: "eventi"
+    service_link: "eventi-e-spettacoli"
     tags:
       - "spettacolo"
       - "trailer"
-    subtitle: "Trailer spettacolo"
     video_url: "videos/jula_sfondo.mp4"
     video_format: "video/mp4"
     video_link: "https://www.youtube.com/watch?v=FNjfTKZJZaU"
   - title: "Silent Sardinia Fest 2025"
     subtitle: "aftermovie evento"
+    service: "eventi"
+    service_link: "eventi-e-spettacoli"
     tags:
       - "aftermovie"
       - "evento"
@@ -67,6 +83,8 @@ items:
     video_link: "https://www.youtube.com/watch?v=4AQQrNjyCi4"
   - title: "Embrance"
     subtitle: "videoclip"
+    service: "videoclip"
+    service_link: "videoclip"
     tags:
       - "videoclip"
       - "musica"
@@ -75,6 +93,8 @@ items:
     video_link: "https://www.youtube.com/watch?v=XweOu-BjFcs"
   - title: "Siamo in Italia"
     subtitle: "performance"
+    service: "videoclip"
+    service_link: "videoclip"
     tags:
       - "musica"
       - "videoclip"

@@ -1,7 +1,10 @@
 <section class="is-black p-0 splash">
-  <video playsinline loop muted autoplay class="splash-video">
-    <source src="videos/Home_breve_720p_35_3.mp4" type="video/mp4" />
-  </video>
+  <div class="splash-container">
+    <video playsinline loop muted autoplay class="splash-video mutable-video">
+      <source src="videos/Home_breve_720p_35_3.mp4" type="video/mp4" />
+    </video>
+    {{ partial "mute_button" }}
+  </div>
   <div class="p-0 has-text-centered has-text-weight-extrabold splash-tagline">
     <p class="is-size-1 is-size-4-mobile condensed">
       <span id="splash-word">Dai una forma alle tue visioni</span>

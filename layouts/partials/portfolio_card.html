@@ -11,7 +11,15 @@
     </video>
   </a>
   <div class="portfolio-details has-background-black-bis has-text-white has-text-weight-bold p-2">
-    <p class="is-size-5">{{ .title }}</p>
+    <p class="is-size-5">
+      {{ .title }}
+      <a
+        class="p-2 mt-1 mr-1 has-text-weight-bold has-text-black has-background-warning tag"
+        style="font-size: 0.75rem"
+        href="{{ .service_link | relURL }}"
+        >{{ .service | default "-" }}
+      </a>
+    </p>
     <p class="is-size-6">{{ .subtitle | default "-" }}</p>
   </div>
 </div>
