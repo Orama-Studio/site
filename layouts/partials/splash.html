@@ -1,6 +1,6 @@
 <section class="is-black p-0 splash">
   <div class="splash-container">
-    <video playsinline loop muted autoplay class="splash-video mutable-video">
+    <video playsinline muted autoplay class="splash-video mutable-video">
       <source src="videos/Home_breve_720p_35_3.mp4" type="video/mp4" />
     </video>
     {{ partial "mute_button" }}
@@ -11,3 +11,10 @@
     </p>
   </div>
 </section>
+<script>
+  const splash = document.getElementsByClassName("splash")[0];
+  const splash_video = document.getElementsByClassName("splash-video")[0];
+  splash_video.onended = (event) => {
+    splash.style.display = "none";
+  };
+</script>

@@ -108,4 +108,4 @@ function toggle_mute_icon() {
   }
 }
 
-console.info("JS loaded!");
+console.info("JS loaded");
