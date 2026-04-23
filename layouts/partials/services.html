@@ -5,14 +5,16 @@
     Lavoriamo in ambiti diversi. Che siano eventi, spettacoli, videoclip, progetti cinematografici
     o contenuti formativi e aziendali, scegliamo ogni volta il linguaggio più adatto alla natura del progetto.
   </p>
-  <div class="narrowed">
-  <div class="carousel" data-interval="5000">
+  <div class="narrowed mt-5">
+  <div class="carousel bb-grey-dark" data-interval="25000">
     <div class="carousel-inner">
       {{ range site.Data.services.items }}
       <div class="carousel-item has-background-black">
-        <a href="{{ .link | relURL }}" class="is-size-3 is-size-4-mobile has-text-white has-text-weight-bold p-0">
-          {{ .title }}
-        </a>
+        <p class="bb-grey-dark">
+          <a href="{{ .link | relURL }}" class="is-size-4 is-size-4-mobile has-text-white has-background-grey-dark has-text-weight-bold p-3 service-title">
+            {{ .title }}
+          </a>
+        </p>
         <a href="{{ .link | relURL }}">
           <img src="{{ printf "images/%s" .image | relURL }}" alt="immagine prodotto" class="sat-30" />
         </a>
