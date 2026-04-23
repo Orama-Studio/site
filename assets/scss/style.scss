@@ -207,6 +207,7 @@ div.narrowed {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: height 0.8s ease;
 }
 
 .splash-video {
