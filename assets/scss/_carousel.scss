@@ -30,13 +30,16 @@
 
 .carousel-control {
   position: absolute;
-  top: 93.5%;
+  top: 95%;
   transform: translateY(-50%);
   color: white;
   border: none;
   padding: 0.5rem;
   cursor: pointer;
   z-index: 1;
+  @include mixins.until(1024px) {
+    top: 90%;
+  }
 }
 
 .carousel-control.prev {
@@ -71,6 +74,16 @@
   cursor: pointer;
   padding: 0;
   margin-bottom: 0.3rem;
+}
+
+.carousel.gallery-carousel .carousel-inner {
+  height: auto !important;
+}
+
+.carousel.gallery-carousel .carousel-item img {
+  height: auto;
+  max-height: calc(var(--vh, 1vh) * 90);
+  object-fit: contain;
 }
 
 .carousel-indicators button.is-active {

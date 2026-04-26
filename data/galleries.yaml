@@ -1,0 +1,37 @@
+videoclip:
+  - title: "backstage"
+    subtitle: "???"
+    images:
+      - "galleries/gallery_videoclip-00.webp"
+      - "galleries/gallery_videoclip-01.webp"
+      - "galleries/gallery_videoclip-02.webp"
+      - "galleries/gallery_videoclip-03.webp"
+      - "galleries/gallery_videoclip-04.webp"
+      - "galleries/gallery_videoclip-05.webp"
+formazione:
+  - title: "fotografia eventi"
+    subtitle: "contesto, presenza, dettagli"
+    images:
+      - "galleries/gallery_formazione-00.webp"
+      - "galleries/gallery_formazione-01.webp"
+      - "galleries/gallery_formazione-02.webp"
+      - "galleries/gallery_formazione-03.webp"
+cinema:
+  - title: "backstage"
+    subtitle: "???"
+    images:
+      - "galleries/gallery_cinema-00.webp"
+      - "galleries/gallery_cinema-01.webp"
+      - "galleries/gallery_cinema-02.webp"
+      - "galleries/gallery_cinema-03.webp"
+      - "galleries/gallery_cinema-04.webp"
+      - "galleries/gallery_cinema-05.webp"
+streaming:
+  - title: "backstage"
+    subtitle: "???"
+    images:
+      - "galleries/gallery_streaming-00.webp"
+      - "galleries/gallery_streaming-01.webp"
+      - "galleries/gallery_streaming-02.webp"
+      - "galleries/gallery_streaming-03.webp"
+      - "galleries/gallery_streaming-04.webp"

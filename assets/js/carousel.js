@@ -17,9 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
     let current = 0;
 
     function goTo(index) {
-      current = (index + items.length) % items.length;
+      if (index < 0) index = 0;
+      if (index >= items.length) index = items.length - 1;
+      current = index;
       inner.style.transform = `translateX(-${current * 100}%)`;
       indicators.forEach((btn, i) => btn.classList.toggle("is-active", i === current));
+      if (prev) prev.style.opacity = current === 0 ? "0.5" : "1";
+      if (next) next.style.opacity = current >= items.length - 1 ? "0.5" : "1";
     }
 
     const prev = carousel.querySelector(".carousel-control.prev");
@@ -31,11 +35,19 @@ document.addEventListener("DOMContentLoaded", () => {
     goTo(0);
 
     const delay = parseInt(carousel.dataset.interval) || 5000;
-    let timer = setInterval(() => goTo(current + 1), delay);
+    let timer = setInterval(() => {
+      if (current >= items.length - 1) { clearInterval(timer); return; }
+      goTo(current + 1);
+    }, delay);
 
     carousel.addEventListener("mouseenter", () => clearInterval(timer));
     carousel.addEventListener("mouseleave", () => {
-      timer = setInterval(() => goTo(current + 1), delay);
+      if (current < items.length - 1) {
+        timer = setInterval(() => {
+          if (current >= items.length - 1) { clearInterval(timer); return; }
+          goTo(current + 1);
+        }, delay);
+      }
     });
 
     let touchStartX = 0;

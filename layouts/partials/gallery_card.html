@@ -1,0 +1,43 @@
+{{ $title := .title }}
+{{ $subtitle := .subtitle }}
+{{ $images := .images }}
+{{ $modalId := printf "gallery-modal-%s" ($title | urlize) }}
+
+<div class="cell reel-card">
+  <a class="js-modal-trigger" data-target="{{ $modalId }}">
+    <img src="{{ printf "images/%s" (index $images 0) | relURL }}"/>
+  </a>
+  <div class="reel-details has-text-white has-background-black-bis has-text-weight-bold">
+    <a class="is-size-5 has-text-white js-modal-trigger" data-target="{{ $modalId }}">
+      <p>
+        {{ $title }}
+        <i class="bi bi-camera-fill has-text-warning reel-icon pr-1 is-size-4"></i>
+      </p>
+      <p class="is-size-6 has-text-white has-text-weight-normal">{{ $subtitle }}</p>
+    </a>
+  </div>
+</div>
+
+<div class="modal" id="{{ $modalId }}">
+  <div class="modal-background has-background-black-bis"></div>
+  <div class="modal-content p-5">
+    <div class="container">
+      <div class="carousel gallery-carousel" data-interval="99999999">
+        <div class="carousel-inner">
+          {{ range $images }}
+          <div class="carousel-item">
+            <img src="{{ printf "images/%s" . | relURL }}" style="width:100%;" />
+          </div>
+          {{ end }}
+        </div>
+        <button class="carousel-control prev is-size-1 is-size-3-mobile has-text-weight-extrabold has-text-warning">
+          <i class="bi bi-arrow-left-circle-fill"></i>
+        </button>
+        <button class="carousel-control next is-size-1 is-size-3-mobile has-text-weight-extrabold has-text-warning">
+          <i class="bi bi-arrow-right-circle-fill"></i>
+        </button>
+        <div class="carousel-indicators"></div>
+      </div>
+    </div>
+  </div>
+</div>

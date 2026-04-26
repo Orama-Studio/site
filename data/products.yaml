@@ -1,18 +1,73 @@
 aziendali_standard:
-  - "Full HD per web, streaming e proiezioni"
-  - "Master in 4K"
+  - "Pianificazione, riprese, postproduzione"
+  - "Master finale in alta risoluzione"
+  - "Output nei formati essenziali concordati"
 aziendali_plus:
-  - "Highlights e clip ADV"
-  - "Video testimonial"
-  - "Sottotitolazione multilingua"
+  - "Clip promo e adattamenti ADV"
+  - "Musiche originali o licenze dedicate"
   - "Versioni per social media"
-  - "Output personalizzati per proiezioni, TV, piattaforme e submission ufficiali"
+  - "Grafiche, titolazioni e sottopancia"
+  - "Sottotitolazione multilingua"
+  - "Troupe estesa, riprese aeree e dotazione tecnica"
+  - "Output personalizzati per proiezioni, archiviazione e/o esigenze specifiche"
 
 streaming_standard:
-  - "Diretta in alta qualità, streaming FullHD/4K per piattaforme social e/o aziendali"
-  - "Registrazione completa e consegna del master integrale per archiviazione o postproduzione"
+  - "Pianificazione, regia, trasmissione e registrazione integrale"
+  - "Master finale in alta risoluzione"
+  - "Output nei formati essenziali concordati"
 streaming_plus:
-  - "Versioni ottimizzate per social media"
-  - "Sottopancia, titolazione, loghi e grafiche personalizzate"
+  - "Contributi remoti e collegamenti esterni"
+  - "Videoracconti e aftermovie"
+  - "Clip promo e versioni per social media"
+  - "Grafiche, titolazioni e sottopancia"
   - "Sottotitolazione multilingua"
-  - "File in formati professionali: ProRes, MXF, DNxHD e altri standard di broadcasting"
+  - "Output personalizzati per proiezioni, archiviazione e/o esigenze specifiche"
+
+videoclip_standard:
+  - "Concept, riprese e postproduzione"
+  - "Master finale in alta risoluzione"
+  - "Output nei formati essenziali concordati"
+videoclip_plus:
+  - "Teaser e clip promo"
+  - "Versioni per social media"
+  - "Backstage"
+  - "Sottotitolazione multilingua"
+  - "Troupe estesa, riprese aeree e dotazione tecnica"
+  - "Output personalizzati per proiezioni, archiviazione e/o esigenze specifiche"
+
+eventi_standard:
+  - "Preparazione, riprese e postproduzione"
+  - "Master finale in alta risoluzione"
+  - "Output nei formati essenziali concordati"
+eventi_plus:
+  - "Regia multicamera e live streaming"
+  - "Clip promo e versioni per social media"
+  - "Backstage"
+  - "Sottotitolazione multilingua"
+  - "Troupe estesa, riprese aeree e dotazione tecnica"
+  - "Output personalizzati per proiezioni, archiviazione e/o esigenze specifiche"
+
+cinema_standard:
+  - "Sviluppo, produzione e postproduzione"
+  - "Master finale in alta risoluzione"
+  - "Output nei formati essenziali concordati"
+cinema_plus:
+  - "Casting, maestranze e supporto di produzione"
+  - "Teaser, trailer, promo e materiali di presentazione"
+  - "Musiche originali o licenze dedicate"
+  - "Backstage"
+  - "Sottotitolazione multilingua"
+  - "Troupe estesa, riprese aeree e dotazione tecnica"
+  - "Output personalizzati per proiezioni, archiviazione e/o esigenze specifiche"
+
+formazione_standard:
+  - "Pianificazione, riprese, postproduzione"
+  - "Master finale in alta risoluzione"
+  - "Output nei formati essenziali concordati"
+formazione_plus:
+  - "Riprese multicamera e dotazione tecnica"
+  - "Live streaming con regia dedicata"
+  - "Clip promo e versioni per social media"
+  - "Grafiche, titolazioni e sottopancia"
+  - "Sottotitolazione multilingua"
+  - "Output personalizzati per proiezioni, archiviazione e/o esigenze specifiche"
