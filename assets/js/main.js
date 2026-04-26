@@ -118,4 +118,31 @@ function toggle_mute_icon() {
   }
 }
 
+function glitchVideos() {
+  let activeCount = 0;
+
+  document.querySelectorAll("video").forEach((video) => {
+    function randomAction() {
+      if (activeCount >= 3) {
+        setTimeout(randomAction, Math.random() * 2000 + 500 - 1000);
+        // setTimeout(randomAction, 1000);
+        return;
+      }
+      activeCount++;
+      const seek = video.currentTime + Math.random() * 10;
+      video.currentTime = seek >= video.duration ? seek - video.duration : seek;
+      video.play();
+      setTimeout(() => {
+        video.pause();
+        activeCount--;
+      }, 5);
+
+      const delay = Math.random() * 5000 + 2500;
+      setTimeout(randomAction, delay);
+    }
+    video.pause();
+    randomAction();
+  });
+}
+
 console.info("JS loaded");
