@@ -137,7 +137,7 @@ function glitchVideos() {
         activeCount--;
       }, 5);
 
-      const delay = Math.random() * 5000 + 2500;
+      const delay = Math.random() * 5000 + 2500 - 250;
       setTimeout(randomAction, delay);
     }
     video.pause();
