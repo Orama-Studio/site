@@ -1,5 +1,5 @@
 {{ $title := .title }}
-{{ $subtitle := .subtitle }}
+{{ $subtitle := .subtitle | default "⚬ ⚬ ⚬" }}
 {{ $images := .images }}
 {{ $modalId := printf "gallery-modal-%s" ($title | urlize) }}
 

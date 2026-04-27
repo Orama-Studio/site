@@ -1,6 +1,6 @@
 videoclip:
   - title: "backstage"
-    subtitle: "???"
+    subtitle: ""
     images:
       - "galleries/gallery_videoclip-00.webp"
       - "galleries/gallery_videoclip-01.webp"
@@ -18,7 +18,7 @@ formazione:
       - "galleries/gallery_formazione-03.webp"
 cinema:
   - title: "backstage"
-    subtitle: "???"
+    subtitle: ""
     images:
       - "galleries/gallery_cinema-00.webp"
       - "galleries/gallery_cinema-01.webp"
@@ -28,7 +28,7 @@ cinema:
       - "galleries/gallery_cinema-05.webp"
 streaming:
   - title: "backstage"
-    subtitle: "???"
+    subtitle: ""
     images:
       - "galleries/gallery_streaming-00.webp"
       - "galleries/gallery_streaming-01.webp"
