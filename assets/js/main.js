@@ -120,12 +120,29 @@ function toggle_mute_icon() {
 
 function glitchVideos() {
   let activeCount = 0;
+  const visibleVideos = new Set();
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          visibleVideos.add(entry.target);
+        } else {
+          visibleVideos.delete(entry.target);
+          entry.target.pause();
+        }
+      });
+    },
+    { threshold: 0.25 },
+  );
 
   document.querySelectorAll("video").forEach((video) => {
+    observer.observe(video);
+    const max_changes = 3;
     function randomAction() {
-      if (activeCount >= 3) {
-        setTimeout(randomAction, Math.random() * 2000 + 500 - 1000);
-        // setTimeout(randomAction, 1000);
+      if (!visibleVideos.has(video) || activeCount >= max_changes) {
+        setTimeout(randomAction, Math.random() * 2000);
+        // setTimeout(randomAction, 2000);
         return;
       }
       activeCount++;
@@ -137,7 +154,8 @@ function glitchVideos() {
         activeCount--;
       }, 5);
 
-      const delay = Math.random() * 5000 + 2500 - 250;
+      const delay = Math.random() * 5000 + 2000;
+      // const delay = 1500;
       setTimeout(randomAction, delay);
     }
     video.pause();
