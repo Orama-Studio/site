@@ -4,11 +4,11 @@
 }
 
 .carousel-inner {
-  height: calc(var(--vh, 1vh) * 48) !important;
+  height: calc(var(--vh, 1vh) * 50) !important;
   display: flex;
   transition: transform 0.5s ease;
   @include mixins.until(1024px) {
-    height: calc(var(--vh, 1vh) * 52) !important;
+    /* height: calc(var(--vh, 1vh) * 50) !important; */
   }
 }
 
@@ -30,7 +30,7 @@
 
 .carousel-control {
   position: absolute;
-  top: 95%;
+  top: 93%;
   transform: translateY(-50%);
   color: white;
   border: none;
@@ -38,7 +38,7 @@
   cursor: pointer;
   z-index: 1;
   @include mixins.until(1024px) {
-    top: 90%;
+    top: 91%;
   }
 }
 
