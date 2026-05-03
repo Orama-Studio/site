@@ -130,7 +130,9 @@ div.narrowed {
 }
 
 .reel-card {
-  height: 30vh;
+  /* height: 30vh; */
+  height: calc(var(--vh-fixed, 1vh) * 30) !important;
+  max-height: calc(var(--vh-fixed, 1vh) * 30) !important;
   min-width: 0;
   position: relative;
   overflow: hidden;

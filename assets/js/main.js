@@ -1,4 +1,5 @@
 document.documentElement.style.setProperty("--vh", `${window.innerHeight * 0.01}px`);
+document.documentElement.style.setProperty("--vh-fixed", `${window.innerHeight * 0.01}px`);
 
 document.addEventListener("DOMContentLoaded", () => {
   // Get all "navbar-burger" elements
