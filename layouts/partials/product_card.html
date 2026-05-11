@@ -14,7 +14,7 @@
             {{ with .Params.products }} {{ with index site.Data.products (printf "%s_standard" .) }} {{
             range . }}
             <tr>
-              <td><i class="bi bi-check2 pr-3 has-text-success has-text-weight-bold"></i></td>
+              <td><i class="bi bi-check2 pr-5 has-text-success has-text-weight-bold"></i></td>
               <td>{{ . }}</td>
             </tr>
             {{ end }} {{ end }} {{ end }}
