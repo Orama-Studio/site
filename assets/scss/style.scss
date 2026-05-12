@@ -113,11 +113,11 @@ div.narrowed {
 }
 
 .method-sectitle {
-  padding: 2.2rem 0.75rem 0 0.75rem;
+  /* padding: 2.2rem 0.75rem 0 0.75rem; */
 }
 
 .method-subtitle {
-  margin: 2rem 0 2rem 0;
+  margin: 2rem 0 3rem 0;
   @include mixins.from(1024px) {
     /* margin: 6rem 0 3rem 0; */
   }
@@ -277,12 +277,13 @@ div.narrowed {
 }
 
 .method-title {
-  margin-top: 0.6rem;
+  /* margin-top: 0.6rem; */
   margin-bottom: 0.6rem;
   line-height: 2.4rem;
   color: white;
   /* border-bottom: 2px solid hsl(0, 0%, 14%); */
   @include mixins.until(768px) {
+    margin-left: 0 !important;
   }
 }
 
@@ -296,6 +297,11 @@ div.narrowed {
   }
 }
 
+.method-text {
+  @include mixins.until(768px) {
+    margin-left: 0 !important;
+  }
+}
 .condensed {
   letter-spacing: -0.15rem;
   @include mixins.until(768px) {
@@ -458,13 +464,10 @@ img.rounded {
 }
 
 .customer-card {
-  border-radius: 0;
-  padding: 1.4rem;
+  /* border-radius: 0; */
+  /* padding: 1.4rem; */
   background-color: transparent !important;
   box-shadow: none;
-  @include mixins.until(768px) {
-    padding: 0rem;
-  }
 }
 
 .customer-comment {

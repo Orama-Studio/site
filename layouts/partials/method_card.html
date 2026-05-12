@@ -1,12 +1,10 @@
-<div class="columns has-background-black-bis m-0 p-0">
+<div class="columns mb-4">
   <div class="column">
     <img src="{{ printf "images/%s" .image | relURL }}" class="sat-30 method-image" alt="immagine metodo" />
   </div>
-  <!--<div class="column is-three-fifths pt-0">-->
-  <!--<div class="column is-two-thirds pt-0">-->
-  <div class="column  is-three-quarters pt-0">
-    <p class="is-size-4 has-text-weight-semibold has-text-left method-title">{{ .title }}</p>
+  <div class="column is-three-quarters">
+    <p class="is-size-4 has-text-weight-semibold has-text-left method-title ml-5">{{ .title }}</p>
     <p class="is-size-4 has-text-weight-semibold has-text-white">{{ .subtitile }}</p>
-    <p class="is-size-5">{{ .phrase }}</p>
+    <p class="is-size-5 ml-5 method-text">{{ .phrase }}</p>
   </div>
 </div>
