@@ -112,15 +112,8 @@ div.narrowed {
   }
 }
 
-.method-sectitle {
-  /* padding: 2.2rem 0.75rem 0 0.75rem; */
-}
-
 .method-subtitle {
-  margin: 2rem 0 3rem 0;
-  @include mixins.from(1024px) {
-    /* margin: 6rem 0 3rem 0; */
-  }
+  margin: 1rem 0 3rem 0;
 }
 
 .company-desc {
