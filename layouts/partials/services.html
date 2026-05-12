@@ -1,15 +1,15 @@
 <p class="anchor" id="servizi"></p>
 <section class="">
-  <p class="is-size-1 p-3 is-size-3-mobile has-text-weight-extrabold condensed is-uppercase">Servizi.</p>
-  <p class="is-size-3 p-3 is-size-4-mobile mb-3 section-subtitle">
+  <p class="is-size-1 is-size-3-mobile has-text-weight-extrabold condensed is-uppercase">Servizi.</p>
+  <p class="is-size-3 is-size-4-mobile mb-3 section-subtitle">
     Lavoriamo in ambiti diversi. Che siano eventi, spettacoli, videoclip, progetti cinematografici
     o contenuti formativi e aziendali, scegliamo ogni volta il linguaggio più adatto alla natura del progetto.
   </p>
-  <div class="narrowed mt-6">
+  <div class="mt-6">
   <div class="carousel bb-grey-dark has-text-right" data-interval="25000">
     <div class="carousel-inner">
       {{ range site.Data.services.items }}
-      <div class="carousel-item has-background-black">
+      <div class="carousel-item">
         <p class="bb-grey-dark service-title pt-1 is-uppercase is-size-6 has-text-weight-extrabold">
           <a href="{{ .link | relURL }}" class="has-text-white has-background-grey-dark p-3">
             {{ .title }}
