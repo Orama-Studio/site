@@ -9,11 +9,14 @@
       <div class="media">
         <div class="media-left">
           <figure class="image is-48x48">
-            <img
-              src="{{ printf "images/%s" .image | relURL }}"
-              class="is-rounded"
-              alt="Placeholder image"
-            />
+            {{ partial "responsive_image" (dict
+              "src"     .image
+              "alt"     .author
+              "class"   "is-rounded"
+              "widths"  (slice 48 96 144)
+              "sizes"   "48px"
+              "loading" "lazy"
+            ) }}
           </figure>
         </div>
         <div class="media-content">

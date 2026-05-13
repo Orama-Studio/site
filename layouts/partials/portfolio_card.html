@@ -5,10 +5,14 @@
     data-target="playback-modal"
     data-video="{{ .video_link }}"
   >
-    <!--<a href="{{ .video_link }}">-->
-    <video playsinline loop muted autoplay class="portfolio-video">
-      <source src="{{ .video_url | relURL }}" type="{{ .video_format }}" />
-    </video>
+    {{ partial "responsive_image" (dict
+      "src"     .poster_url
+      "alt"     .title
+      "class"   "portfolio-video"
+      "widths"  (slice 640 1024 1280)
+      "sizes"   "(max-width: 768px) 100vw, 50vw"
+      "loading" "lazy"
+    ) }}
   </a>
   <div class="portfolio-details has-background-black-bis has-text-white has-text-weight-bold p-2">
     <p class="is-size-5">

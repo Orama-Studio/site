@@ -1,7 +1,15 @@
 {{ $data := index site.Data . }} {{ with index $data 0 }}
 <section class="hero mb-6 service-splash" style="position: relative">
-  <video class="mutable-video replayable-video" playsinline muted autoplay>
-    <source src="{{ .video_url | relURL }}" type="{{ .video_format }}" />
+  <video
+    class="mutable-video replayable-video"
+    playsinline
+    muted
+    autoplay
+    preload="metadata"
+    poster="{{ .poster_url | relURL }}"
+    width="1024"
+    height="576">
+    <source src="{{ .video_url | relURL }}" type="video/mp4" />
   </video>
   {{ partial "replay_button" }} {{ partial "mute_button" }}
 </section>

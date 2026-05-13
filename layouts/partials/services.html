@@ -16,7 +16,14 @@
           </a>
         </p>
         <a href="{{ .link | relURL }}">
-          <img src="{{ printf "images/%s" .image | relURL }}" alt="immagine prodotto" class="sat-30" />
+          {{ partial "responsive_image" (dict
+            "src"     .image
+            "alt"     .title
+            "class"   "sat-30"
+            "widths"  (slice 640 1024 1280)
+            "sizes"   "(max-width: 768px) 100vw, 1024px"
+            "loading" "lazy"
+          ) }}
         </a>
       </div>
       {{ end }}

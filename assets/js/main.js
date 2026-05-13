@@ -49,6 +49,15 @@ document.addEventListener("DOMContentLoaded", () => {
           iframe.src = match ? "https://www.youtube.com/embed/" + match[1] + "?autoplay=1" : videoUrl;
         }
       }
+      // Promote lazy-loaded gallery images (data-src/data-srcset → real attrs).
+      $target.querySelectorAll("img[data-src]").forEach((img) => {
+        img.src = img.dataset.src;
+        img.removeAttribute("data-src");
+      });
+      $target.querySelectorAll("source[data-srcset]").forEach((src) => {
+        src.srcset = src.dataset.srcset;
+        src.removeAttribute("data-srcset");
+      });
       openModal($target);
     });
   });
@@ -97,9 +106,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-const mediaElem = document.querySelector("video");
-mediaElem.load();
-
 function replay_video() {
   const v = document.getElementsByClassName("replayable-video")[0];
   if (typeof v !== "undefined") {
@@ -117,51 +123,6 @@ function toggle_mute_icon() {
     v.muted = !v.muted;
     b.innerHTML = v.muted ? icon_on : icon_off;
   }
-}
-
-function glitchVideos() {
-  let activeCount = 0;
-  const visibleVideos = new Set();
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          visibleVideos.add(entry.target);
-        } else {
-          visibleVideos.delete(entry.target);
-          entry.target.pause();
-        }
-      });
-    },
-    { threshold: 0.25 },
-  );
-
-  document.querySelectorAll("video").forEach((video) => {
-    observer.observe(video);
-    const max_changes = 3;
-    function randomAction() {
-      if (!visibleVideos.has(video) || activeCount >= max_changes) {
-        setTimeout(randomAction, Math.random() * 2000);
-        // setTimeout(randomAction, 2000);
-        return;
-      }
-      activeCount++;
-      const seek = video.currentTime + Math.random() * 10;
-      video.currentTime = seek >= video.duration ? seek - video.duration : seek;
-      video.play();
-      setTimeout(() => {
-        video.pause();
-        activeCount--;
-      }, 5);
-
-      const delay = Math.random() * 5000 + 2000;
-      // const delay = 1500;
-      setTimeout(randomAction, delay);
-    }
-    video.pause();
-    randomAction();
-  });
 }
 
 console.info("JS loaded");

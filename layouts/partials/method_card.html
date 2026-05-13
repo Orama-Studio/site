@@ -1,6 +1,13 @@
 <div class="columns mb-4">
   <div class="column">
-    <img src="{{ printf "images/%s" .image | relURL }}" class="sat-30 method-image" alt="immagine metodo" />
+    {{ partial "responsive_image" (dict
+      "src"     .image
+      "alt"     "immagine metodo"
+      "class"   "sat-30 method-image"
+      "widths"  (slice 240 480 720)
+      "sizes"   "(max-width: 768px) 25vw, 240px"
+      "loading" "lazy"
+    ) }}
   </div>
   <div class="column is-three-quarters">
     <p class="is-size-4 has-text-weight-semibold has-text-left method-title ml-5">{{ .title }}</p>

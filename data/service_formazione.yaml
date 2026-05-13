@@ -1,7 +1,7 @@
 - title: "Formazione."
   subtitle: "Per crescere, approfondire, conservare."
-  video_url: "videos/splash_formazione.mp4"
-  video_format: "video/mp4"
+  video_url: "videos/splash_formazione-480p.mp4"
+  poster_url: "images/splash_formazione-poster.jpg"
   howtos:
     - name: "Analisi e obiettivi"
       phrase: "Analizziamo temi e obiettivi per creare un video formativo efficace"

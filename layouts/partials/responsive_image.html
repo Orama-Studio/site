@@ -1,0 +1,70 @@
+{{- /*
+  Responsive image partial.
+  Usage:
+    {{ partial "responsive_image" (dict
+      "src"     "paolo-maggi.png"
+      "alt"     "Paolo Maggi"
+      "class"   "is-rounded sat-0 founder-image"
+      "widths"  (slice 400 800 1200)
+      "sizes"   "(max-width: 768px) 400px, 800px"
+      "loading" "lazy"
+    ) }}
+*/ -}}
+
+{{- $src     := .src -}}
+{{- $alt     := .alt | default "" -}}
+{{- $class   := .class | default "" -}}
+{{- $widths  := .widths | default (slice 640 1024 1600) -}}
+{{- $sizes   := .sizes  | default "100vw" -}}
+{{- $loading := .loading | default "lazy" -}}
+
+{{- $img := resources.Get (printf "images/%s" $src) -}}
+{{- if not $img -}}
+  {{ errorf "responsive_image: not found in assets/images/: %s" $src }}
+{{- end -}}
+
+{{- /* Filter widths to those that don't upscale. */ -}}
+{{- $usableWidths := slice -}}
+{{- range $widths -}}
+  {{- if le . $img.Width -}}
+    {{- $usableWidths = $usableWidths | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- /* If every requested width exceeds the source, fall back to the source width itself. */ -}}
+{{- if eq (len $usableWidths) 0 -}}
+  {{- $usableWidths = slice $img.Width -}}
+{{- end -}}
+
+{{- /* Build the AVIF, WebP, and JPEG srcsets.
+       Resize+convert in a single step using the format suffix on .Resize. */ -}}
+{{- $avifSet := slice -}}
+{{- $webpSet := slice -}}
+{{- $jpgSet  := slice -}}
+{{- range $usableWidths -}}
+  {{- $w := . -}}
+  {{- $avif := ($img.Resize (printf "%dx avif q80" $w)) | resources.Fingerprint -}}
+  {{- $webp := ($img.Resize (printf "%dx webp q80" $w)) | resources.Fingerprint -}}
+  {{- $jpg  := ($img.Resize (printf "%dx jpg q82"  $w)) | resources.Fingerprint -}}
+  {{- $avifSet = $avifSet | append (printf "%s %dw" $avif.RelPermalink $w) -}}
+  {{- $webpSet = $webpSet | append (printf "%s %dw" $webp.RelPermalink $w) -}}
+  {{- $jpgSet  = $jpgSet  | append (printf "%s %dw" $jpg.RelPermalink  $w) -}}
+{{- end -}}
+
+{{- /* Fallback <img> uses the largest jpg variant. */ -}}
+{{- $largest := index $usableWidths (sub (len $usableWidths) 1) -}}
+{{- $fallback := ($img.Resize (printf "%dx jpg q82" $largest)) | resources.Fingerprint -}}
+
+<picture>
+  <source type="image/avif" srcset="{{ delimit $avifSet ", " }}" sizes="{{ $sizes }}">
+  <source type="image/webp" srcset="{{ delimit $webpSet ", " }}" sizes="{{ $sizes }}">
+  <img
+    src="{{ $fallback.RelPermalink }}"
+    srcset="{{ delimit $jpgSet ", " }}"
+    sizes="{{ $sizes }}"
+    width="{{ $img.Width }}"
+    height="{{ $img.Height }}"
+    alt="{{ $alt }}"
+    {{ with $class }}class="{{ . }}"{{ end }}
+    loading="{{ $loading }}"
+    decoding="async">
+</picture>

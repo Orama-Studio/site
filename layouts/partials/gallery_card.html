@@ -5,7 +5,13 @@
 
 <div class="cell reel-card">
   <a class="js-modal-trigger" data-target="{{ $modalId }}">
-    <img src="{{ printf "images/%s" (index $images 0) | relURL }}"/>
+    {{ partial "responsive_image" (dict
+      "src"     (index $images 0)
+      "alt"     $title
+      "widths"  (slice 320 640 960)
+      "sizes"   "(max-width: 768px) 100vw, 480px"
+      "loading" "lazy"
+    ) }}
   </a>
   <div class="reel-details has-text-white has-background-black-bis has-text-weight-bold">
     <a class="is-size-5 has-text-white js-modal-trigger" data-target="{{ $modalId }}">
@@ -26,7 +32,22 @@
         <div class="carousel-inner">
           {{ range $images }}
           <div class="carousel-item">
-            <img src="{{ printf "images/%s" . | relURL }}" style="width:100%;" />
+            {{- /* Lazy: resolve through Hugo's pipeline for fingerprinted URLs, but emit them as data-* so the browser doesn't fetch on page load. Promoted to real src/srcset by the modal-open handler in main.js. */ -}}
+            {{- $full := resources.Get (printf "images/%s" .) -}}
+            {{- $avif := ($full.Resize (printf "%dx avif q80" $full.Width)) | resources.Fingerprint -}}
+            {{- $webp := ($full.Resize (printf "%dx webp q80" $full.Width)) | resources.Fingerprint -}}
+            {{- $jpg  := ($full.Resize (printf "%dx jpg q82"  $full.Width)) | resources.Fingerprint -}}
+            <picture>
+              <source type="image/avif" data-srcset="{{ $avif.RelPermalink }}">
+              <source type="image/webp" data-srcset="{{ $webp.RelPermalink }}">
+              <img
+                data-src="{{ $jpg.RelPermalink }}"
+                width="{{ $full.Width }}"
+                height="{{ $full.Height }}"
+                alt=""
+                style="width:100%;"
+                decoding="async">
+            </picture>
           </div>
           {{ end }}
         </div>

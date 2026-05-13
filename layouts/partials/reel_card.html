@@ -1,6 +1,12 @@
 <div class="cell reel-card">
   <a class="js-modal-trigger" data-target="playback-modal" data-video="{{ .link }}">
-    <img src="{{ printf "images/%s" .image | relURL }}"/>
+    {{ partial "responsive_image" (dict
+      "src"     .image
+      "alt"     .title
+      "widths"  (slice 320 640 960)
+      "sizes"   "(max-width: 768px) 100vw, 480px"
+      "loading" "lazy"
+    ) }}
   </a>
   <div class="reel-details has-text-white has-background-black-bis has-text-weight-bold">
     <a class="is-size-5 has-text-white js-modal-trigger" data-target="playback-modal" data-video="{{ .link }}">

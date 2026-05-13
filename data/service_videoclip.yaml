@@ -1,4 +1,4 @@
 - title: "Videoclip."
   subtitle: "Fai vedere la tua musica."
-  video_url: "videos/splash_videoclip.mp4"
-  video_format: "video/mp4"
+  video_url: "videos/splash_videoclip-480p.mp4"
+  poster_url: "images/splash_videoclip-poster.jpg"
