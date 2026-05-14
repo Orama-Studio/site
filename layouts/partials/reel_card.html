@@ -1,20 +1,32 @@
 <div class="cell reel-card">
-  <a class="js-modal-trigger" data-target="playback-modal" data-video="{{ .link }}">
-    {{ partial "responsive_image" (dict
-      "src"     .image
-      "alt"     .title
-      "widths"  (slice 320 640 960)
-      "sizes"   "(max-width: 768px) 100vw, 480px"
-      "loading" "lazy"
-    ) }}
+  <a
+    aria-label="Toggle playback modal"
+    class="js-modal-trigger"
+    data-target="playback-modal"
+    data-video="{{ .link }}"
+  >
+    {{ partial "responsive_image" (dict "src" .image "alt" .title "widths"
+    (slice 320 640 960) "sizes" "(max-width: 768px) 100vw, 480px" "loading"
+    "lazy" ) }}
   </a>
-  <div class="reel-details has-text-white has-background-black-bis has-text-weight-bold">
-    <a class="is-size-5 has-text-white js-modal-trigger" data-target="playback-modal" data-video="{{ .link }}">
+  <div
+    class="reel-details has-text-white has-background-black-bis has-text-weight-bold"
+  >
+    <a
+      class="is-size-5 has-text-white js-modal-trigger"
+      aria-label="Toggle playback modal"
+      data-target="playback-modal"
+      data-video="{{ .link }}"
+    >
       <p>
         {{ .title }}
-        <i class="bi bi-play-circle-fill has-text-warning reel-icon pr-1 is-size-4"></i>
+        <i
+          class="bi bi-play-circle-fill has-text-warning reel-icon pr-1 is-size-4"
+        ></i>
       </p>
-      <p class="is-size-6 has-text-white has-text-weight-normal">{{ .subtitle }}</p>
+      <p class="is-size-6 has-text-white has-text-weight-normal">
+        {{ .subtitle }}
+      </p>
     </a>
   </div>
 </div>
@@ -22,8 +34,25 @@
   <div class="modal-background has-background-black-bis"></div>
   <div class="modal-content p-5">
     <div class="container">
-      <div class="is-relative" style="padding-bottom:56.25%;height:0;overflow:hidden;">
-        <iframe id="playback-iframe" style="position:absolute;top:0;left:0;width:100%;height:100%;" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div
+        class="is-relative"
+        style="padding-bottom:56.25%;height:0;overflow:hidden;"
+      >
+        <iframe
+          id="playback-iframe"
+          style="position:absolute;top:0;left:0;width:100%;height:100%;"
+          src=""
+          frameborder="0"
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture;
+          "
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
   </div>

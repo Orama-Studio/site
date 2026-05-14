@@ -7,6 +7,7 @@
     {{- $first := index $images 0 -}} {{- $firstFull := resources.Get (printf
     "images/%s" $first) -}}
     <a
+      aria-label="Gallery control"
       href="{{ ($firstFull | resources.Fingerprint).RelPermalink }}"
       data-pswp-src="{{ ($firstFull | resources.Fingerprint).RelPermalink }}"
       data-pswp-width="{{ $firstFull.Width }}"
@@ -21,6 +22,7 @@
     gallery selector. */ -}} {{- range after 1 $images -}} {{- $full :=
     resources.Get (printf "images/%s" .) -}}
     <a
+      aria-label="Gallery control"
       href="{{ ($full | resources.Fingerprint).RelPermalink }}"
       data-pswp-src="{{ ($full | resources.Fingerprint).RelPermalink }}"
       data-pswp-width="{{ $full.Width }}"
