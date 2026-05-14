@@ -13,15 +13,17 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ "images/favicon-32x32.png" | relURL }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ "images/favicon-16x16.png" | relURL }}">
     <link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
-    {{ $opts := dict "transpiler" "dartsass" }}
+    {{ $opts := dict "transpiler" "dartsass" "outputStyle" "compressed" }}
     {{ $style := resources.Get "scss/style.scss" | toCSS $opts | fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
     {{ with resources.Get "js/main.js" }}
-      {{ $js := . | fingerprint }}
+      {{ $jsOpts := dict "minify" true "targetPath" "js/main.js" }}
+      {{ $js := . | js.Build $jsOpts | fingerprint }}
       <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
     {{ end }}
     {{ with resources.Get "js/carousel.js" }}
-      {{ $js := . | fingerprint }}
+      {{ $jsOpts := dict "minify" true "targetPath" "js/carousel.js" }}
+      {{ $js := . | js.Build $jsOpts | fingerprint }}
       <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
     {{ end }}
     {{ with resources.Get "js/gallery-lightbox.js" }}
