@@ -49,15 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
           iframe.src = match ? "https://www.youtube.com/embed/" + match[1] + "?autoplay=1" : videoUrl;
         }
       }
-      // Promote lazy-loaded gallery images (data-src/data-srcset → real attrs).
-      // $target.querySelectorAll("img[data-src]").forEach((img) => {
-      //   img.src = img.dataset.src;
-      //   img.removeAttribute("data-src");
-      // });
-      // $target.querySelectorAll("source[data-srcset]").forEach((src) => {
-      //   src.srcset = src.dataset.srcset;
-      //   src.removeAttribute("data-srcset");
-      // });
       openModal($target);
     });
   });
@@ -106,6 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 function replay_video() {
   const v = document.getElementsByClassName("replayable-video")[0];
   if (typeof v !== "undefined") {
