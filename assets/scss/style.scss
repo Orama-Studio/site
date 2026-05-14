@@ -428,10 +428,36 @@ img.rounded {
   width: 95vw;
 }
 
+// PhotoSwipe controls — match the project's carousel arrows (Bootstrap Icons
+// in `has-text-warning` color, transparent buttons).
+$pswp-warning: hsl(
+  var(--bulma-warning-h),
+  var(--bulma-warning-s),
+  calc(var(--bulma-warning-l) + var(--bulma-hover-color-l-delta))
+);
+
+.pswp__top-bar {
+  margin-top: 1rem;
+}
+
+.pswp__button {
+  margin: 0 1rem;
+  background: none !important;
+  .bi {
+    color: $pswp-warning;
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+}
+
+.pswp__counter {
+  color: $pswp-warning;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 .service-subtitle {
-  /* line-height: 1.6rem; */
   letter-spacing: -0.1rem;
-  /* margin-top: 4rem; */
 }
 
 .shorts-title {
