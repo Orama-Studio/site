@@ -24,6 +24,11 @@
       {{ $js := . | fingerprint }}
       <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
     {{ end }}
+    {{ with resources.Get "js/gallery-lightbox.js" }}
+      {{ $opts := dict "minify" true "targetPath" "js/gallery-lightbox.js" }}
+      {{ $bundle := . | js.Build $opts | fingerprint }}
+      <script src="{{ $bundle.RelPermalink }}" integrity="{{ $bundle.Data.Integrity }}" defer></script>
+    {{ end }}
   </head>
   <body data-base="{{ "" | relURL }}">
     {{ block "header" . }} {{ partial "navbar" }} {{ end }}

@@ -50,14 +50,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
       // Promote lazy-loaded gallery images (data-src/data-srcset → real attrs).
-      $target.querySelectorAll("img[data-src]").forEach((img) => {
-        img.src = img.dataset.src;
-        img.removeAttribute("data-src");
-      });
-      $target.querySelectorAll("source[data-srcset]").forEach((src) => {
-        src.srcset = src.dataset.srcset;
-        src.removeAttribute("data-srcset");
-      });
+      // $target.querySelectorAll("img[data-src]").forEach((img) => {
+      //   img.src = img.dataset.src;
+      //   img.removeAttribute("data-src");
+      // });
+      // $target.querySelectorAll("source[data-srcset]").forEach((src) => {
+      //   src.srcset = src.dataset.srcset;
+      //   src.removeAttribute("data-srcset");
+      // });
       openModal($target);
     });
   });

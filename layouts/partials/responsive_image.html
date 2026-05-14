@@ -35,17 +35,14 @@
   {{- $usableWidths = slice $img.Width -}}
 {{- end -}}
 
-{{- /* Build the AVIF, WebP, and JPEG srcsets.
-       Resize+convert in a single step using the format suffix on .Resize. */ -}}
-{{- $avifSet := slice -}}
+{{- /* Build the WebP and JPEG srcsets. AVIF is omitted because Hugo's
+       distributed binaries (even +extended+withdeploy) don't include libavif. */ -}}
 {{- $webpSet := slice -}}
 {{- $jpgSet  := slice -}}
 {{- range $usableWidths -}}
   {{- $w := . -}}
-  {{- $avif := ($img.Resize (printf "%dx avif q80" $w)) | resources.Fingerprint -}}
   {{- $webp := ($img.Resize (printf "%dx webp q80" $w)) | resources.Fingerprint -}}
   {{- $jpg  := ($img.Resize (printf "%dx jpg q82"  $w)) | resources.Fingerprint -}}
-  {{- $avifSet = $avifSet | append (printf "%s %dw" $avif.RelPermalink $w) -}}
   {{- $webpSet = $webpSet | append (printf "%s %dw" $webp.RelPermalink $w) -}}
   {{- $jpgSet  = $jpgSet  | append (printf "%s %dw" $jpg.RelPermalink  $w) -}}
 {{- end -}}
@@ -55,7 +52,6 @@
 {{- $fallback := ($img.Resize (printf "%dx jpg q82" $largest)) | resources.Fingerprint -}}
 
 <picture>
-  <source type="image/avif" srcset="{{ delimit $avifSet ", " }}" sizes="{{ $sizes }}">
   <source type="image/webp" srcset="{{ delimit $webpSet ", " }}" sizes="{{ $sizes }}">
   <img
     src="{{ $fallback.RelPermalink }}"

@@ -7,9 +7,6 @@
   height: calc(var(--vh, 1vh) * 50) !important;
   display: flex;
   transition: transform 0.5s ease;
-  @include mixins.until(1024px) {
-    /* height: calc(var(--vh, 1vh) * 50) !important; */
-  }
 }
 
 .carousel-item {
@@ -63,7 +60,6 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  /* border: 2px solid white; */
   border: 2px solid
     hsl(
       var(--bulma-warning-h),
@@ -76,7 +72,7 @@
   margin-bottom: 0.3rem;
 }
 
-.carousel.gallery-carousel .carousel-inner {
+/* .carousel.gallery-carousel .carousel-inner {
   height: auto !important;
 }
 
@@ -84,10 +80,9 @@
   height: auto;
   max-height: calc(var(--vh, 1vh) * 90);
   object-fit: contain;
-}
+} */
 
 .carousel-indicators button.is-active {
-  /* background: white; */
   background-color: hsl(
     var(--bulma-warning-h),
     var(--bulma-warning-s),

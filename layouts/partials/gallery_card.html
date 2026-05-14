@@ -1,64 +1,45 @@
-{{ $title := .title }}
-{{ $subtitle := .subtitle | default "⚬ ⚬ ⚬" }}
-{{ $images := .images }}
-{{ $modalId := printf "gallery-modal-%s" ($title | urlize) }}
+{{ $title := .title }} {{ $subtitle := .subtitle | default "⚬ ⚬ ⚬" }} {{ $images
+:= .images }} {{ $galleryId := printf "gallery-%s" ($title | urlize) }}
 
 <div class="cell reel-card">
-  <a class="js-modal-trigger" data-target="{{ $modalId }}">
-    {{ partial "responsive_image" (dict
-      "src"     (index $images 0)
-      "alt"     $title
-      "widths"  (slice 320 640 960)
-      "sizes"   "(max-width: 768px) 100vw, 480px"
-      "loading" "lazy"
-    ) }}
-  </a>
-  <div class="reel-details has-text-white has-background-black-bis has-text-weight-bold">
-    <a class="is-size-5 has-text-white js-modal-trigger" data-target="{{ $modalId }}">
-      <p>
-        {{ $title }}
-        <i class="bi bi-camera-fill has-text-warning reel-icon pr-1 is-size-4"></i>
-      </p>
-      <p class="is-size-6 has-text-white has-text-weight-normal">{{ $subtitle }}</p>
+  <div class="gallery-lightbox" id="{{ $galleryId }}">
+    {{- /* Visible thumbnail = first image, opens the lightbox on click. */ -}}
+    {{- $first := index $images 0 -}} {{- $firstFull := resources.Get (printf
+    "images/%s" $first) -}}
+    <a
+      href="{{ ($firstFull | resources.Fingerprint).RelPermalink }}"
+      data-pswp-src="{{ ($firstFull | resources.Fingerprint).RelPermalink }}"
+      data-pswp-width="{{ $firstFull.Width }}"
+      data-pswp-height="{{ $firstFull.Height }}"
+    >
+      {{ partial "responsive_image" (dict "src" $first "alt" $title "widths"
+      (slice 320 640 960) "sizes" "(max-width: 768px) 100vw, 480px" "loading"
+      "lazy" ) }}
     </a>
-  </div>
-</div>
 
-<div class="modal" id="{{ $modalId }}">
-  <div class="modal-background has-background-black-bis"></div>
-  <div class="modal-content p-5">
-    <div class="container">
-      <div class="carousel gallery-carousel" data-interval="99999999">
-        <div class="carousel-inner">
-          {{ range $images }}
-          <div class="carousel-item">
-            {{- /* Lazy: resolve through Hugo's pipeline for fingerprinted URLs, but emit them as data-* so the browser doesn't fetch on page load. Promoted to real src/srcset by the modal-open handler in main.js. */ -}}
-            {{- $full := resources.Get (printf "images/%s" .) -}}
-            {{- $avif := ($full.Resize (printf "%dx avif q80" $full.Width)) | resources.Fingerprint -}}
-            {{- $webp := ($full.Resize (printf "%dx webp q80" $full.Width)) | resources.Fingerprint -}}
-            {{- $jpg  := ($full.Resize (printf "%dx jpg q82"  $full.Width)) | resources.Fingerprint -}}
-            <picture>
-              <source type="image/avif" data-srcset="{{ $avif.RelPermalink }}">
-              <source type="image/webp" data-srcset="{{ $webp.RelPermalink }}">
-              <img
-                data-src="{{ $jpg.RelPermalink }}"
-                width="{{ $full.Width }}"
-                height="{{ $full.Height }}"
-                alt=""
-                style="width:100%;"
-                decoding="async">
-            </picture>
-          </div>
-          {{ end }}
-        </div>
-        <button class="carousel-control prev is-size-1 is-size-3-mobile has-text-weight-extrabold has-text-warning">
-          <i class="bi bi-arrow-left-circle-fill"></i>
-        </button>
-        <button class="carousel-control next is-size-1 is-size-3-mobile has-text-weight-extrabold has-text-warning">
-          <i class="bi bi-arrow-right-circle-fill"></i>
-        </button>
-        <div class="carousel-indicators"></div>
-      </div>
-    </div>
+    {{- /* The remaining images: hidden anchors, picked up by PhotoSwipe via the
+    gallery selector. */ -}} {{- range after 1 $images -}} {{- $full :=
+    resources.Get (printf "images/%s" .) -}}
+    <a
+      href="{{ ($full | resources.Fingerprint).RelPermalink }}"
+      data-pswp-src="{{ ($full | resources.Fingerprint).RelPermalink }}"
+      data-pswp-width="{{ $full.Width }}"
+      data-pswp-height="{{ $full.Height }}"
+      hidden
+    ></a>
+    {{- end -}}
+  </div>
+  <div
+    class="reel-details has-text-white has-background-black-bis has-text-weight-bold"
+  >
+    <p class="is-size-5">
+      {{ $title }}
+      <i
+        class="bi bi-camera-fill has-text-warning reel-icon pr-1 is-size-4"
+      ></i>
+    </p>
+    <p class="is-size-6 has-text-white has-text-weight-normal">
+      {{ $subtitle }}
+    </p>
   </div>
 </div>
