@@ -98,15 +98,17 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-function replay_video() {
+// Attached to window so the inline `onclick` handlers in replay_button.html
+// and mute_button.html can find them after esbuild wraps this module in an IIFE.
+window.replay_video = function () {
   const v = document.getElementsByClassName("replayable-video")[0];
   if (typeof v !== "undefined") {
     v.currentTime = 0;
     v.play();
   }
-}
+};
 
-function toggle_mute_icon() {
+window.toggle_mute_icon = function () {
   const v = document.getElementsByClassName("mutable-video")[0];
   if (typeof v !== "undefined") {
     const b = document.getElementById("mute-button");
@@ -115,6 +117,6 @@ function toggle_mute_icon() {
     v.muted = !v.muted;
     b.innerHTML = v.muted ? icon_on : icon_off;
   }
-}
+};
 
 console.info("JS loaded");
