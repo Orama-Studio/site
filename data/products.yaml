@@ -4,11 +4,11 @@ aziendali_standard:
   - "Output nei formati essenziali concordati"
 aziendali_plus:
   - "Clip promo e adattamenti ADV"
-  - "Musiche originali o licenze dedicate"
   - "Versioni per social media"
-  - "Grafiche, titolazioni e sottopancia"
-  - "Sottotitolazione multilingua"
   - "Troupe estesa, riprese aeree e dotazione tecnica"
+  - "Grafiche, titolazioni e sottopancia"
+  - "Musiche originali o licenze dedicate"
+  - "Sottotitolazione multilingua"
   - "Output personalizzati per proiezioni, archiviazione e/o esigenze specifiche"
 
 streaming_standard:
@@ -16,11 +16,13 @@ streaming_standard:
   - "Master finale in alta risoluzione"
   - "Output nei formati essenziali concordati"
 streaming_plus:
+  - "Camere aggiuntive, riprese aeree e dotazione tecnica estesa"
   - "Contributi remoti e collegamenti esterni"
-  - "Videoracconti e aftermovie"
-  - "Clip promo e versioni per social media"
   - "Grafiche, titolazioni e sottopancia"
   - "Sottotitolazione multilingua"
+  - "Editing e rifinitura della registrazione"
+  - "Videoracconti e aftermovie"
+  - "Clip promo e versioni per social media"
   - "Output personalizzati per proiezioni, archiviazione e/o esigenze specifiche"
 
 videoclip_standard:
@@ -28,6 +30,7 @@ videoclip_standard:
   - "Master finale in alta risoluzione"
   - "Output nei formati essenziali concordati"
 videoclip_plus:
+  - "Camere aggiuntive, riprese aeree e dotazione tecnica estesa"
   - "Teaser e clip promo"
   - "Versioni per social media"
   - "Backstage"
@@ -41,6 +44,7 @@ eventi_standard:
   - "Output nei formati essenziali concordati"
 eventi_plus:
   - "Regia multicamera e live streaming"
+  - "Camere aggiuntive, riprese aeree e dotazione tecnica estesa"
   - "Clip promo e versioni per social media"
   - "Backstage"
   - "Sottotitolazione multilingua"
