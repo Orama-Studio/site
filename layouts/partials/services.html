@@ -1,23 +1,16 @@
 <p class="anchor" id="servizi"></p>
 <section>
-  <p
-    class="is-size-1 is-size-3-mobile has-text-weight-extrabold condensed is-uppercase"
-  >
-    Servizi.
-  </p>
+  <p class="is-size-1 is-size-3-mobile has-text-weight-extrabold condensed is-uppercase">Servizi.</p>
   <p class="is-size-3 is-size-4-mobile mb-3 section-subtitle">
-    Lavoriamo in ambiti diversi. Che siano eventi, spettacoli, videoclip,
-    progetti cinematografici o contenuti formativi e aziendali, scegliamo ogni
-    volta il linguaggio più adatto alla natura del progetto.
+    Lavoriamo in ambiti diversi. Che siano eventi, spettacoli, videoclip, progetti cinematografici o
+    contenuti formativi e aziendali, scegliamo ogni volta il linguaggio più adatto alla natura del progetto.
   </p>
   <div class="mt-6">
     <div class="carousel bb-grey-dark has-text-right" data-interval="25000">
       <div class="carousel-inner">
         {{ range site.Data.services.items }}
         <div class="carousel-item">
-          <p
-            class="bb-grey-dark service-title pt-1 is-uppercase is-size-6 has-text-weight-extrabold"
-          >
+          <p class="bb-grey-dark service-title pt-1 is-uppercase is-size-6 has-text-weight-extrabold">
             <a
               aria-label="Go to service"
               href="{{ .link | relURL }}"
@@ -27,7 +20,8 @@
             </a>
           </p>
           <a href="{{ .link | relURL }}">
-            {{ partial "responsive_image" (dict "src" .image "alt" .title "class" "sat-30" "widths" (slice 640 1024 1280) "sizes" "(max-width: 768px) 100vw, 1024px" "loading" "lazy" ) }}
+            {{ partial "responsive_image" (dict "src" .image "alt" .title "class" "sat-30" "widths" (slice
+            640 1024 1280) "sizes" "(max-width: 768px) 100vw, 1024px" "loading" "lazy" ) }}
           </a>
         </div>
         {{ end }}
