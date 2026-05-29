@@ -17,3 +17,6 @@ title = "Orama"
 [imaging]
   quality = 80
   resampleFilter = "Lanczos"
+
+[params]
+  description = "Orama Studio — produzione video a Roma: cortometraggi, documentari, eventi, video aziendali, videoclip e live streaming."
