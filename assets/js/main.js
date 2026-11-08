@@ -81,6 +81,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const targetEl = document.getElementById(targetId);
       if (targetEl) {
         e.preventDefault();
+
+        if (window.location.hash !== `#${targetId}`) {
+          window.history.pushState(null, "", `#${targetId}`);
+        }
+
         targetEl.scrollIntoView({ behavior: "smooth" });
 
         // Close mobile menu if open
