@@ -3,6 +3,8 @@ languageCode = "it-it"
 defaultContentLanguage = "it"
 title = "Orama Studio"
 
+disableKinds = ["taxonomy", "term"]
+
 [[module.mounts]]
   source = "assets"
   target = "assets"
