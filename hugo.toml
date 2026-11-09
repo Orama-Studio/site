@@ -1,7 +1,7 @@
 baseURL = "https://orama-studio.github.io/site/"
 languageCode = "it-it"
 defaultContentLanguage = "it"
-title = "Orama"
+title = "Orama Studio"
 
 [[module.mounts]]
   source = "assets"
