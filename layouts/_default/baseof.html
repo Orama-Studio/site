@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    <title>{{ block "title" . }}{{ if .IsHome }}{{ .Site.Title }} | Produzione video a Roma{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}{{ end }}</title>
     {{ partial "seo.html" . }}
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,6 +36,6 @@
   <body data-base="{{ "" | relURL }}">
     {{ block "header" . }} {{ partial "navbar" }} {{ end }}
     <main>{{ block "main" . }}{{ end }}</main>
-    {{ block "footer" . }} {{ partial "footer" }} {{ end }}
+    {{ block "footer" . }} {{ partial "footer" }}{{ end }}
   </body>
 </html>
