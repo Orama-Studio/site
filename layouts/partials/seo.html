@@ -12,7 +12,7 @@
 {{- $defaultDesc := .Site.Params.description | default "Orama Studio — produzione video a Roma: cortometraggi, documentari, eventi, video aziendali, videoclip e live streaming." -}}
 {{- $desc := .Params.description | default $defaultDesc -}}
 
-{{- $title := cond .IsHome .Site.Title (printf "%s | %s" .Title .Site.Title) -}}
+{{- $title := cond .IsHome (printf "%s | Produzione video a Roma" .Site.Title) (printf "%s | %s" .Title .Site.Title) -}}
 
 {{- $ogImagePath := .Params.og_image | default "images/splash-home-poster.jpg" -}}
 {{- $ogImage := $ogImagePath | absURL -}}
