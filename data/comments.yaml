@@ -3,16 +3,18 @@ items:
     role: "Regista"
     image: "diego-tigrotto.png"
     phrase: >
-      Una produzione capace di affrontare un progetto delicato
-      con misura e consapevolezza, sempre in dialogo con la regia
-      per controllo dell'immagine e rispetto della visione, senza forzature
+      Nel lavoro sul set, Orama ha mantenuto un confronto costante
+      con la regia, curando l'immagine nel rispetto del tono e
+      della delicatezza del progetto.
+
   - author: "Etta Politico"
     role: "Presidente - Serendippo"
     image: "serendippo.png"
     phrase: >
-      Orama ha saputo ascoltare e riorganizzare il racconto senza semplificarlo,
-      mantenendo uno sguardo autonomo e rispettoso del reale in un percorso
-      condiviso, costruito passo dopo passo
+      Orama ha saputo raccontare ciò che stava accadendo con attenzione
+      e sensibilità, facendo emergere i dettagli importanti senza
+      perdere la complessità della situazione.
+
   - author: "Alfonso Pecoraro Scanio"
     role: "Presidente - Fondazione UniVerde"
     image: "pecoraro-scanio.jpg"
@@ -20,13 +22,15 @@ items:
       In Orama ho riscontrato un approccio professionale sempre attento alla chiarezza
       dei contenuti e capace di operare in contesti istituzionali, nel rispetto del linguaggio
       e del ruolo pubblico
+
   - author: "Danilo Del Bosco"
     role: "CEO - Promos Comunicazione"
     image: "promos-comunicazione.jpg"
     phrase: >
-      Abbiamo trovato un interlocutore capace di leggere la visione di un’agenzia
-      e tradurla in contenuti video coerenti, mantenendo chiarezza di messaggio
-      anche su progetti articolati
+      Abbiamo trovato un interlocutore capace di comprendere le esigenze
+      dell'agenzia e tradurle in contenuti video coerenti, mantenendo
+      chiarezza di messaggio anche nei progetti più articolati.
+
   - author: "Marco Seri"
     role: "Direttore tecnico - Quelli che ballano"
     image: "quelli-che-ballano.jpg"
@@ -34,6 +38,7 @@ items:
       Durante gli spettacoli dal vivo è essenziale poter contare su una presenza
       concentrata su ciò che accade in scena. Con Orama Studio lavoriamo da anni
       con precisione e tranquillità
+
   - author: "Michele Moi"
     role: "Presidente – Roerso Mondo"
     image: "michele-moi.jpg"
@@ -41,6 +46,7 @@ items:
       Nel racconto degli eventi Orama Studio riesce a cogliere ciò che accade senza
       forzarlo. I video nascono dall’esperienza vissuta sul campo e restituiscono
       l’atmosfera con naturalezza
+
   - author: "Fabrizio Fazio"
     role: "Regista - Vision Studio"
     image: "fabrizio-fazio.jpg"
@@ -48,17 +54,21 @@ items:
       Orama lavora sul set con un'attenzione particolare al linguaggio
       cinematografico e al ritmo della musica. Il dialogo con la regia è fluido,
       in equilibrio tra precisione tecnica ed esigenza espressiva
+
   - author: "Ombretta Fontanini"
     role: "Formatrice – Akademy World"
     image: "akademy.jpg"
     phrase: >
-      Nel corso dei percorsi formativi Orama ha lavorato con attenzione e continuità,
-      registrando le lezioni in modo chiaro e rispettoso del ritmo dell’aula. La loro
-      presenza è sempre naturale e misurata
+      Durante i percorsi formativi Orama ha lavorato con attenzione
+      e continuità, registrando le lezioni in modo chiaro e rispettando
+      i tempi dell'aula. Una presenza discreta, che ci ha permesso
+      di lavorare con naturalezza.
+
   - author: "Laura Pierallini"
     role: "Fondatrice – Studio Pierallini"
     image: "laura-pierallini.jpg"
     phrase: >
-      Nelle dirette è fondamentale che tutto funzioni e in Orama
-      abbiamo trovato un partner capace di garantire continuità e chiarezza in
-      situazioni complesse con discrezione e attenzione costanti al contenuto
+      Nelle dirette è importante poter contare su qualcuno che sappia
+      gestire anche le situazioni più complesse. Con Orama abbiamo
+      lavorato con continuità e tranquillità, mantenendo sempre
+      al centro i contenuti.
