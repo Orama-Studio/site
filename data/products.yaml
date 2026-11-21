@@ -56,12 +56,11 @@ cinema_standard:
   - "Master finale in alta risoluzione"
   - "Output nei formati essenziali concordati"
 cinema_plus:
-  - "Casting, maestranze e supporto di produzione"
   - "Teaser, trailer, promo e materiali di presentazione"
   - "Musiche originali o licenze dedicate"
   - "Backstage"
   - "Sottotitolazione multilingua"
-  - "Troupe estesa, riprese aeree e dotazione tecnica"
+  - "Riprese aeree e dotazioni tecniche specifiche"
   - "Output personalizzati per proiezioni, archiviazione e/o esigenze specifiche"
 
 formazione_standard:
