@@ -8,6 +8,8 @@
         <p class="is-size-4 is-size-5-mobile has-text-white has-text-centered lh-2 mb-5">
           {{ if eq .RelPermalink "/corti-e-documentari/" }}
             Seguiamo l'intero progetto o singole fasi della lavorazione, secondo le esigenze della produzione.
+          {{ else if eq .RelPermalink "/live-streaming/" }}
+            Il servizio standard include tutto il necessario per realizzare una diretta completa, adattata alle caratteristiche dell'evento.
           {{ else }}
             Il servizio standard include tutto il necessario per una produzione completa, pronta per la diffusione.
           {{ end }}
@@ -37,8 +39,13 @@
       </div>
       <div class="offer-body mb-3">
         <p class="is-size-4 is-size-5-mobile has-text-white has-text-centered lh-2 mb-5">
-          Il servizio <strong class="has-text-success has-text-weight-bold pr-1 pl-1">+</strong> estende il
-          lavoro con integrazioni pensate per contesti ed esigenze specifiche.
+          {{ if eq .RelPermalink "/live-streaming/" }}
+            Il servizio <strong class="has-text-success has-text-weight-bold pr-1 pl-1">+</strong>
+            estende la diretta con integrazioni pensate per le caratteristiche e le esigenze specifiche dell'evento.
+          {{ else }}
+            Il servizio <strong class="has-text-success has-text-weight-bold pr-1 pl-1">+</strong>
+            estende il lavoro con integrazioni pensate per contesti ed esigenze specifiche.
+          {{ end }}
         </p>
         <table>
           <tbody class="is-size-5">
