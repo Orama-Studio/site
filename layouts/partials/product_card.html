@@ -2,7 +2,7 @@
   <div class="column">
     <div class="offer p-4">
       <div class="offer-title pb-3">
-        <p class="is-size-2 has-text-weight-extrabold service-name">standard</p>
+        <h2 class="is-size-2 has-text-weight-extrabold service-name m-0 p-0">standard</h2>
       </div>
       <div class="offer-body mb-3">
         <p class="is-size-4 is-size-5-mobile has-text-white has-text-centered lh-2 mb-5">
@@ -11,22 +11,26 @@
         </p>
         <table>
           <tbody class="is-size-5">
-            {{ with .Params.products }} {{ with index site.Data.products (printf "%s_standard" .) }} {{
-            range . }}
-            <tr>
-              <td><i class="bi bi-check2 pr-5 has-text-success has-text-weight-bold"></i></td>
-              <td>{{ . }}</td>
-            </tr>
-            {{ end }} {{ end }} {{ end }}
+            {{ with .Params.products }}
+              {{ with index site.Data.products (printf "%s_standard" .) }}
+                {{ range . }}
+                  <tr>
+                    <td><i class="bi bi-check2 pr-5 has-text-success has-text-weight-bold"></i></td>
+                    <td>{{ . }}</td>
+                  </tr>
+                {{ end }}
+              {{ end }}
+            {{ end }}
           </tbody>
         </table>
       </div>
     </div>
   </div>
+
   <div class="column">
     <div class="offer p-4">
       <div class="offer-title pb-3">
-        <p class="is-size-1 has-text-weight-extrabold has-text-success service-name">+</p>
+        <h2 class="is-size-1 has-text-weight-extrabold has-text-success service-name m-0 p-0" aria-label="Servizio Plus">+</h2>
       </div>
       <div class="offer-body mb-3">
         <p class="is-size-4 is-size-5-mobile has-text-white has-text-centered lh-2 mb-5">
@@ -35,16 +39,16 @@
         </p>
         <table>
           <tbody class="is-size-5">
-            {{ with .Params.products }} {{ with index site.Data.products (printf "%s_plus" .) }} {{ range .
-            }}
-            <p class="is-size-5 is-size-6-mobile">
-              <!--<i class="bi bi-check2 pr-3 has-text-warning"></i>-->
-              <tr>
-                <td><span class="pr-5 has-text-success has-text-weight-bold">+</span></td>
-                <td>{{ . }}</td>
-              </tr>
-            </p>
-            {{ end }} {{ end }} {{ end }}
+            {{ with .Params.products }}
+              {{ with index site.Data.products (printf "%s_plus" .) }}
+                {{ range . }}
+                  <tr>
+                    <td><span class="pr-5 has-text-success has-text-weight-bold">+</span></td>
+                    <td>{{ . }}</td>
+                  </tr>
+                {{ end }}
+              {{ end }}
+            {{ end }}
           </tbody>
         </table>
       </div>
