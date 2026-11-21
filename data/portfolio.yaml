@@ -1,4 +1,4 @@
-items:
+gitems:
   - title: "Escluso il cane"
     subtitle: "cortometraggio di finzione"
     service: "cinema"
@@ -134,7 +134,7 @@ items:
     poster_url: "portfolio/air-law-conf-2026-poster.jpg"
 
   - title: "Tiuk Travel 2026"
-    subtitle: "video aziendale"
+    subtitle: "video corporate"
     service: "aziende"
     service_link: "video-aziendali"
     tags:
@@ -143,8 +143,8 @@ items:
     video_link: "https://youtu.be/R-BPzv4k1qI"
     poster_url: "portfolio/tiuk-travel-2026-poster.jpg"
 
-  - title: "Air Law Conference 2026 – Opening Video"
-    subtitle: "video di apertura"
+  - title: "Air Law Conference 2026"
+    subtitle: "opening video"
     service: "eventi"
     service_link: "eventi-e-spettacoli"
     tags:
