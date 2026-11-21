@@ -1,9 +1,12 @@
+
 <div class="cell reel-card">
   <a
-    aria-label="Toggle playback modal"
+    href="{{ .link }}"
+    aria-label="Riproduci video: {{ .title }}"
     class="js-modal-trigger"
     data-target="playback-modal"
     data-video="{{ .link }}"
+    onclick="event.preventDefault()"
   >
     {{ partial "responsive_image" (dict "src" .image "alt" .title "widths"
     (slice 320 640 960) "sizes" "(max-width: 768px) 100vw, 480px" "loading"
@@ -13,10 +16,12 @@
     class="reel-details has-text-white has-background-black-bis has-text-weight-bold"
   >
     <a
+      href="{{ .link }}"
       class="is-size-5 has-text-white js-modal-trigger"
-      aria-label="Toggle playback modal"
+      aria-label="Riproduci video: {{ .title }}"
       data-target="playback-modal"
       data-video="{{ .link }}"
+      onclick="event.preventDefault()"
     >
       <p>
         {{ .title }}
@@ -40,6 +45,7 @@
       >
         <iframe
           id="playback-iframe"
+          title="Riproduzione video"
           style="position:absolute;top:0;left:0;width:100%;height:100%;"
           src=""
           frameborder="0"
