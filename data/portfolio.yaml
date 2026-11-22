@@ -19,7 +19,7 @@ items:
     video_link: "https://www.youtube.com/watch?v=R-BPzv4k1qI"
     poster_url: "portfolio/tiuk-travel-2026-poster.jpg"
 
-  - title: "Air Law Conf 2026"
+  - title: "Air Law Conference 2026"
     subtitle: "aftermovie evento"
     service: "aziende"
     service_link: "video-aziendali"
@@ -113,8 +113,8 @@ items:
 
   - title: "Air Law Conference 2026"
     subtitle: "opening video"
-    service: "eventi"
-    service_link: "eventi-e-spettacoli"
+    service: "aziende"
+    service_link: "video-aziendali"
     tags:
       - "opening"
       - "evento"
