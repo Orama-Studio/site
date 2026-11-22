@@ -2,7 +2,7 @@ items:
   - title: "Escluso il cane"
     subtitle: "cortometraggio di finzione"
     service: "cinema"
-    service_link: "corti-e-documentari"
+    service_link: "cinema"
     tags:
       - "corto"
       - "finzione"
@@ -12,7 +12,7 @@ items:
   - title: "La Zona"
     subtitle: "teaser documentario"
     service: "cinema"
-    service_link: "corti-e-documentari"
+    service_link: "cinema"
     tags:
       - "teaser"
       - "documentario"
@@ -22,7 +22,7 @@ items:
   - title: "Ad-dicted"
     subtitle: 'episodio della serie "Gli Ispettori"'
     service: "cinema"
-    service_link: "corti-e-documentari"
+    service_link: "cinema"
     tags:
       - "teaser"
       - "serie"
@@ -32,7 +32,7 @@ items:
   - title: "La seconda possibilità"
     subtitle: "cortometraggio di finzione"
     service: "cinema"
-    service_link: "corti-e-documentari"
+    service_link: "cinema"
     tags:
       - "teaser"
       - "serie"
@@ -140,7 +140,7 @@ items:
     tags:
       - "corporate"
       - "promozionale"
-    video_link: "https://youtu.be/R-BPzv4k1qI"
+    video_link: "https://www.youtube.com/watch?v=R-BPzv4k1qI"
     poster_url: "portfolio/tiuk-travel-2026-poster.jpg"
 
   - title: "Air Law Conference 2026"
@@ -151,5 +151,5 @@ items:
       - "opening"
       - "evento"
       - "motion graphics"
-    video_link: "https://youtu.be/4bIlbl7oqQw"
+    video_link: "https://www.youtube.com/watch?v=4bIlbl7oqQw"
     poster_url: "portfolio/air-law-opening-2026-poster.jpg"
