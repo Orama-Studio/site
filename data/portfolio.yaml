@@ -9,118 +9,15 @@ items:
     video_link: "https://www.youtube.com/watch?v=uqJ7AxooIVA"
     poster_url: "portfolio/escluso-il-cane-poster.jpg"
 
-  - title: "La Zona"
-    subtitle: "teaser documentario"
-    service: "cinema"
-    service_link: "cinema"
+  - title: "Tiuk Travel 2026"
+    subtitle: "video corporate"
+    service: "aziende"
+    service_link: "video-aziendali"
     tags:
-      - "teaser"
-      - "documentario"
-    video_link: "https://www.youtube.com/watch?v=wCjwneEmvaU"
-    poster_url: "portfolio/la-zona-poster.jpg"
-
-  - title: "Ad-dicted"
-    subtitle: 'episodio della serie "Gli Ispettori"'
-    service: "cinema"
-    service_link: "cinema"
-    tags:
-      - "teaser"
-      - "serie"
-    video_link: "https://www.youtube.com/watch?v=6VK34RlsL9c"
-    poster_url: "portfolio/ad-dicted-poster.jpg"
-
-  - title: "La seconda possibilità"
-    subtitle: "cortometraggio di finzione"
-    service: "cinema"
-    service_link: "cinema"
-    tags:
-      - "teaser"
-      - "serie"
-    video_link: "https://www.youtube.com/watch?v=dCIb08xRlp8"
-    poster_url: "portfolio/la-seconda-possibilita-poster.jpg"
-
-  - title: "Jula e il drago"
-    subtitle: "trailer spettacolo"
-    service: "eventi"
-    service_link: "eventi-e-spettacoli"
-    tags:
-      - "spettacolo"
-      - "trailer"
-    video_link: "https://www.youtube.com/watch?v=FNjfTKZJZaU"
-    poster_url: "portfolio/jula-e-il-drago-poster.jpg"
-
-  - title: "Nico Maraja - Leopardi (luna blu)"
-    subtitle: "narrativo"
-    service: "videoclip"
-    service_link: "videoclip"
-    tags:
-      - "musica"
-      - "videoclip"
-    video_link: "https://www.youtube.com/watch?v=IhvJsbgK0_Y"
-    poster_url: "portfolio/nico-maraja-leopardi-poster.jpg"
-
-  - title: "Leonardo Angelucci - Calamite"
-    subtitle: "narrativo"
-    service: "videoclip"
-    service_link: "videoclip"
-    tags:
-      - "musica"
-      - "videoclip"
-    video_link: "https://www.youtube.com/watch?v=Y6f9fQdcGQk"
-    poster_url: "portfolio/leonardo-angelucci-calamite-poster.jpg"
-
-  - title: "Concerto a Capotesta – SSF 2025"
-    subtitle: "aftermovie concerto"
-    service: "eventi"
-    service_link: "eventi-e-spettacoli"
-    tags:
-      - "aftermovie"
-      - "evento"
-      - "musica"
-    video_link: "https://www.youtube.com/watch?v=4AQQrNjyCi4"
-    poster_url: "portfolio/capotesta-ssf-2025-poster.jpg"
-
-  - title: "Aggius – SSF 2023"
-    subtitle: "aftermovie evento"
-    service: "eventi"
-    service_link: "eventi-e-spettacoli"
-    tags:
-      - "aftermovie"
-      - "evento"
-      - "musica"
-    video_link: "https://www.youtube.com/watch?v=H-vlg6E29KU"
-    poster_url: "portfolio/aggius-ssf-2023-poster.jpg"
-
-  - title: "Alla ricerca del mio posto – SSF 2022"
-    subtitle: "promo narrativo"
-    service: "eventi"
-    service_link: "eventi-e-spettacoli"
-    tags:
-      - "aftermovie"
-      - "evento"
-      - "musica"
-    video_link: "https://www.youtube.com/watch?v=zBpGV7b2e_w"
-    poster_url: "portfolio/alla-ricerca-ssf-2022-poster.jpg"
-
-  - title: "Quelli che ballano"
-    subtitle: "spettacolo multicamera"
-    service: "eventi"
-    service_link: "eventi-e-spettacoli"
-    tags:
-      - "spettacolo"
-      - "multicamera"
-    video_link: "https://www.youtube.com/watch?v=JqwpMAcrNp4"
-    poster_url: "portfolio/quelli-che-ballano-poster.jpg"
-
-  - title: "Embrance"
-    subtitle: "videoclip"
-    service: "videoclip"
-    service_link: "videoclip"
-    tags:
-      - "videoclip"
-      - "musica"
-    video_link: "https://www.youtube.com/watch?v=XweOu-BjFcs"
-    poster_url: "portfolio/embrance-poster.jpg"
+      - "corporate"
+      - "promozionale"
+    video_link: "https://www.youtube.com/watch?v=R-BPzv4k1qI"
+    poster_url: "portfolio/tiuk-travel-2026-poster.jpg"
 
   - title: "Air Law Conf 2026"
     subtitle: "aftermovie evento"
@@ -133,15 +30,86 @@ items:
     video_link: "https://www.youtube.com/watch?v=hOZr3-uxob4"
     poster_url: "portfolio/air-law-conf-2026-poster.jpg"
 
-  - title: "Tiuk Travel 2026"
-    subtitle: "video corporate"
-    service: "aziende"
-    service_link: "video-aziendali"
+  - title: "Nico Maraja - Leopardi (luna blu)"
+    subtitle: "narrativo"
+    service: "videoclip"
+    service_link: "videoclip"
     tags:
-      - "corporate"
-      - "promozionale"
-    video_link: "https://www.youtube.com/watch?v=R-BPzv4k1qI"
-    poster_url: "portfolio/tiuk-travel-2026-poster.jpg"
+      - "musica"
+      - "videoclip"
+    video_link: "https://www.youtube.com/watch?v=IhvJsbgK0_Y"
+    poster_url: "portfolio/nico-maraja-leopardi-poster.jpg"
+
+  - title: "Quelli che ballano"
+    subtitle: "spettacolo multicamera"
+    service: "eventi"
+    service_link: "eventi-e-spettacoli"
+    tags:
+      - "spettacolo"
+      - "multicamera"
+    video_link: "https://www.youtube.com/watch?v=JqwpMAcrNp4"
+    poster_url: "portfolio/quelli-che-ballano-poster.jpg"
+
+  - title: "Concerto a Capotesta – SSF 2025"
+    subtitle: "aftermovie concerto"
+    service: "eventi"
+    service_link: "eventi-e-spettacoli"
+    tags:
+      - "aftermovie"
+      - "evento"
+      - "musica"
+    video_link: "https://www.youtube.com/watch?v=4AQQrNjyCi4"
+    poster_url: "portfolio/capotesta-ssf-2025-poster.jpg"
+
+  - title: "Ad-dicted"
+    subtitle: 'episodio della serie "Gli Ispettori"'
+    service: "cinema"
+    service_link: "cinema"
+    tags:
+      - "teaser"
+      - "serie"
+    video_link: "https://www.youtube.com/watch?v=6VK34RlsL9c"
+    poster_url: "portfolio/ad-dicted-poster.jpg"
+
+  - title: "Embrance"
+    subtitle: "videoclip"
+    service: "videoclip"
+    service_link: "videoclip"
+    tags:
+      - "videoclip"
+      - "musica"
+    video_link: "https://www.youtube.com/watch?v=XweOu-BjFcs"
+    poster_url: "portfolio/embrance-poster.jpg"
+
+  - title: "Jula e il drago"
+    subtitle: "trailer spettacolo"
+    service: "eventi"
+    service_link: "eventi-e-spettacoli"
+    tags:
+      - "spettacolo"
+      - "trailer"
+    video_link: "https://www.youtube.com/watch?v=FNjfTKZJZaU"
+    poster_url: "portfolio/jula-e-il-drago-poster.jpg"
+
+  - title: "La Zona"
+    subtitle: "teaser documentario"
+    service: "cinema"
+    service_link: "cinema"
+    tags:
+      - "teaser"
+      - "documentario"
+    video_link: "https://www.youtube.com/watch?v=wCjwneEmvaU"
+    poster_url: "portfolio/la-zona-poster.jpg"
+
+  - title: "Leonardo Angelucci - Calamite"
+    subtitle: "narrativo"
+    service: "videoclip"
+    service_link: "videoclip"
+    tags:
+      - "musica"
+      - "videoclip"
+    video_link: "https://www.youtube.com/watch?v=Y6f9fQdcGQk"
+    poster_url: "portfolio/leonardo-angelucci-calamite-poster.jpg"
 
   - title: "Air Law Conference 2026"
     subtitle: "opening video"
@@ -153,3 +121,35 @@ items:
       - "motion graphics"
     video_link: "https://www.youtube.com/watch?v=4bIlbl7oqQw"
     poster_url: "portfolio/air-law-opening-2026-poster.jpg"
+
+  - title: "Aggius – SSF 2023"
+    subtitle: "aftermovie evento"
+    service: "eventi"
+    service_link: "eventi-e-spettacoli"
+    tags:
+      - "aftermovie"
+      - "evento"
+      - "musica"
+    video_link: "https://www.youtube.com/watch?v=H-vlg6E29KU"
+    poster_url: "portfolio/aggius-ssf-2023-poster.jpg"
+
+  - title: "La seconda possibilità"
+    subtitle: "cortometraggio di finzione"
+    service: "cinema"
+    service_link: "cinema"
+    tags:
+      - "teaser"
+      - "serie"
+    video_link: "https://www.youtube.com/watch?v=dCIb08xRlp8"
+    poster_url: "portfolio/la-seconda-possibilita-poster.jpg"
+
+  - title: "Alla ricerca del mio posto – SSF 2022"
+    subtitle: "promo narrativo"
+    service: "eventi"
+    service_link: "eventi-e-spettacoli"
+    tags:
+      - "aftermovie"
+      - "evento"
+      - "musica"
+    video_link: "https://www.youtube.com/watch?v=zBpGV7b2e_w"
+    poster_url: "portfolio/alla-ricerca-ssf-2022-poster.jpg"
