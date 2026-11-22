@@ -25,7 +25,6 @@ streaming_plus:
   - "Clip promo e versioni per social media"
   - "Output personalizzati per proiezioni, archiviazione e/o esigenze specifiche"
 
-
 videoclip_standard:
   - "Concept, regia, riprese e postproduzione"
   - "Master finale in alta risoluzione"
@@ -44,12 +43,11 @@ eventi_standard:
   - "Output nei formati essenziali concordati"
 eventi_plus:
   - "Regia multicamera e live streaming"
-  - "Camere aggiuntive, riprese aeree e dotazione tecnica estesa"
-  - "Clip promo e versioni per social media"
+  - "Camere aggiuntive, troupe e dotazioni tecniche estese, comprese eventuali riprese aeree"
+  - "Teaser, clip promozionali e versioni per social media"
   - "Backstage"
   - "Sottotitolazione multilingua"
-  - "Troupe estesa, riprese aeree e dotazione tecnica"
-  - "Output personalizzati per proiezioni, archiviazione e/o esigenze specifiche"
+  - "Formati di consegna personalizzati per proiezioni, archiviazione o esigenze specifiche"
 
 cinema_standard:
   - "Sviluppo, produzione e postproduzione"
