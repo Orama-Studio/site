@@ -5,20 +5,20 @@
     Dalla comunicazione aziendale alla formazione, dai progetti cinematografici ai videoclip, fino agli eventi e agli spettacoli: ci&nbsp;sono storie da costruire e momenti da cogliere.
   </p>
   <div class="mt-6">
-    <div class="carousel bb-grey-dark has-text-right" data-interval="6000">
+    <div class="carousel bb-grey-dark has-text-right" data-interval="6000" aria-label="Carosello dei servizi di Orama Studio">
       <div class="carousel-inner">
         {{ range site.Data.services.items }}
         <div class="carousel-item">
           <p class="bb-grey-dark service-title pt-1 is-uppercase is-size-6 has-text-weight-extrabold">
             <a
-              aria-label="Go to service"
+              aria-label="Scopri il servizio: {{ .title }}"
               href="{{ .link | relURL }}"
               class="has-text-white has-background-grey-dark p-3"
             >
               {{ .title }} <i class="bi bi-arrow-up-right" aria-hidden="true" style="margin-left: 0.35em; font-size: 0.9em;"></i>
             </a>
           </p>
-          <a href="{{ .link | relURL }}">
+          <a href="{{ .link | relURL }}" aria-label="Scopri il servizio: {{ .title }}">
             {{ partial "responsive_image" (dict "src" .image "alt" .title "class" "sat-30" "widths" (slice
             640 1024 1280) "sizes" "(max-width: 768px) 100vw, 1024px" "loading" "lazy" ) }}
           </a>
@@ -26,18 +26,20 @@
         {{ end }}
       </div>
       <button
-        aria-label="Gallery control previous"
+        type="button"
+        aria-label="Servizio precedente"
         class="carousel-control prev is-size-1 is-size-3-mobile has-text-weight-extrabold has-text-warning"
       >
-        <i class="bi bi-arrow-left-circle-fill"></i>
+        <i class="bi bi-arrow-left-circle-fill" aria-hidden="true"></i>
       </button>
       <button
-        aria-label="Gallery control next"
+        type="button"
+        aria-label="Servizio successivo"
         class="carousel-control next is-size-1 is-size-3-mobile has-text-weight-extrabold has-text-warning"
       >
-        <i class="bi bi-arrow-right-circle-fill"></i>
+        <i class="bi bi-arrow-right-circle-fill" aria-hidden="true"></i>
       </button>
-      <div class="carousel-indicators"></div>
+      <div class="carousel-indicators" aria-label="Seleziona un servizio"></div>
     </div>
   </div>
 </section>
