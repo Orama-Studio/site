@@ -20,8 +20,8 @@
     cards2.forEach((c) => (c.style.display = "none"));
 
     while (true) {
-      rand1 = Math.round(Math.random() * 100) % cards1.length;
-      rand2 = Math.round(Math.random() * 100) % cards2.length;
+      const rand1 = Math.round(Math.random() * 100) % cards1.length;
+      const rand2 = Math.round(Math.random() * 100) % cards2.length;
       if (rand1 != rand2) {
         cards1[rand1].style.display = "";
         cards2[rand2].style.display = "";
