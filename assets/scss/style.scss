@@ -183,6 +183,17 @@ div.narrowed {
   opacity: 1;
 }
 
+.portfolio-card .js-modal-trigger {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
 .portfolio-details {
   position: absolute;
   bottom: 0;
@@ -294,6 +305,7 @@ div.narrowed {
     margin-left: 0 !important;
   }
 }
+
 .condensed {
   letter-spacing: -0.15rem;
   @include mixins.until(768px) {
@@ -493,6 +505,7 @@ $pswp-warning: hsl(
   font-style: italic;
   line-height: 1.8rem;
 }
+
 .customer-card p.title {
   color: white;
 }
