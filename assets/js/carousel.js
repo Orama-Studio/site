@@ -12,9 +12,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     indicatorsContainer.innerHTML = "";
-    items.forEach(() => {
+    items.forEach((item, i) => {
       const btn = document.createElement("button");
       btn.type = "button";
+
+      const serviceTitle = item.querySelector(".service-title a");
+      const title = serviceTitle
+        ? serviceTitle.textContent.trim()
+        : `Servizio ${i + 1}`;
+
+      btn.setAttribute("aria-label", `Mostra servizio: ${title}`);
       indicatorsContainer.appendChild(btn);
     });
 
@@ -43,7 +50,14 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       indicators.forEach((btn, i) => {
-        btn.classList.toggle("is-active", i === current);
+        const isActive = i === current;
+        btn.classList.toggle("is-active", isActive);
+
+        if (isActive) {
+          btn.setAttribute("aria-current", "true");
+        } else {
+          btn.removeAttribute("aria-current");
+        }
       });
 
       if (prev) prev.style.opacity = "1";
@@ -86,7 +100,17 @@ document.addEventListener("DOMContentLoaded", () => {
     carousel.addEventListener("mouseenter", stopTimer);
 
     carousel.addEventListener("mouseleave", () => {
-      if (!touched) startTimer();
+      if (!touched && !carousel.contains(document.activeElement)) {
+        startTimer();
+      }
+    });
+
+    carousel.addEventListener("focusin", stopTimer);
+
+    carousel.addEventListener("focusout", (e) => {
+      if (!carousel.contains(e.relatedTarget) && !touched) {
+        startTimer();
+      }
     });
 
     let touchStartX = 0;
