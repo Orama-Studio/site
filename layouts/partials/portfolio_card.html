@@ -1,5 +1,5 @@
 {{ range .items }}
-<div class="cell portfolio-card">
+<div class="cell portfolio-card" data-category="{{ .service }}">
   <a
     href="{{ .video_link }}"
   aria-label="Guarda il video: {{ .title }}"
