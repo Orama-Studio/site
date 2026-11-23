@@ -2,9 +2,9 @@
 <div class="cell portfolio-card">
   <a
     aria-label="Guarda il video: {{ .title }}"
-  class="is-size-5 has-text-white js-modal-trigger"
-  data-target="playback-modal"
-  data-video="{{ .video_link }}"
+    class="is-size-5 has-text-white js-modal-trigger"
+    data-target="playback-modal"
+    data-video="{{ .video_link }}"
   >
     {{ partial "responsive_image" (dict "src" .poster_url "alt" .title "class" "portfolio-video" "widths" (slice 640 1024 1280) "sizes" "(max-width: 768px) 100vw, 50vw" "loading" "lazy" ) }}
   </a>
@@ -23,8 +23,14 @@
     <p class="is-size-6">{{ .subtitle | default "-" }}</p>
   </div>
 </div>
+
 <div class="modal" id="playback-modal">
   <div class="modal-background has-background-black-bis"></div>
+  <button
+    class="modal-close is-large"
+    aria-label="Chiudi video"
+    type="button"
+  ></button>
   <div class="modal-content p-5">
     <div class="container">
       <div
