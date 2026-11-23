@@ -4,15 +4,25 @@ document.documentElement.style.setProperty("--vh-fixed", `${window.innerHeight *
 document.addEventListener("DOMContentLoaded", () => {
   // Get all "navbar-burger" elements
   const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"), 0);
+
   // Add a click event on each of them
   $navbarBurgers.forEach((el) => {
     el.addEventListener("click", () => {
       // Get the target from the "data-target" attribute
       const target = el.dataset.target;
       const $target = document.getElementById(target);
-      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-      el.classList.toggle("is-active");
-      $target.classList.toggle("is-active");
+      if (!$target) return;
+
+      // Toggle the "is-active" class on both elements
+      const isActive = el.classList.toggle("is-active");
+      $target.classList.toggle("is-active", isActive);
+
+      // Update accessibility attributes
+      el.setAttribute("aria-expanded", String(isActive));
+      el.setAttribute(
+        "aria-label",
+        isActive ? "Chiudi menu di navigazione" : "Apri menu di navigazione"
+      );
     });
   });
 });
@@ -94,6 +104,10 @@ document.addEventListener("DOMContentLoaded", () => {
         if (burger?.classList.contains("is-active")) {
           burger.classList.remove("is-active");
           menu?.classList.remove("is-active");
+
+          // Update accessibility attributes
+          burger.setAttribute("aria-expanded", "false");
+          burger.setAttribute("aria-label", "Apri menu di navigazione");
         }
       } else {
         const base = document.body.dataset.base || "/";
