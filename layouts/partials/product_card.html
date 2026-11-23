@@ -2,11 +2,11 @@
   <div class="column">
     <div class="offer p-4">
       <div class="offer-title pb-3">
-        <h2 class="is-size-2 has-text-weight-extrabold service-name m-0 p-0">standard</h2>
+        <h2 class="is-size-2 has-text-weight-extrabold service-name m-0 p-0" style="color: #A0A8B5">standard</h2>
       </div>
       <div class="offer-body mb-3">
         <p class="is-size-4 is-size-5-mobile has-text-white has-text-centered lh-2 mb-5">
-          {{ if eq .RelPermalink "/corti-e-documentari/" }}
+          {{ if eq .RelPermalink "/cinema/" }}
             Seguiamo l'intero progetto o singole fasi della lavorazione, secondo le esigenze della produzione.
           {{ else if eq .RelPermalink "/live-streaming/" }}
             Il servizio standard include tutto il necessario per realizzare una diretta completa, adattata alle caratteristiche dell'evento.
@@ -15,13 +15,13 @@
           {{ end }}
         </p>
         <table>
-          <tbody class="is-size-5">
+          <tbody class="is-size-5" style="color: #A0A8B5">
             {{ with .Params.products }}
               {{ with index site.Data.products (printf "%s_standard" .) }}
                 {{ range . }}
                   <tr>
                     <td><i class="bi bi-check2 pr-5 has-text-success has-text-weight-bold"></i></td>
-                    <td>{{ . }}</td>
+                    <td style="color: #A0A8B5">{{ . }}</td>
                   </tr>
                 {{ end }}
               {{ end }}
@@ -48,13 +48,13 @@
           {{ end }}
         </p>
         <table>
-          <tbody class="is-size-5">
+          <tbody class="is-size-5" style="color: #A0A8B5">
             {{ with .Params.products }}
               {{ with index site.Data.products (printf "%s_plus" .) }}
                 {{ range . }}
                   <tr>
                     <td><span class="pr-5 has-text-success has-text-weight-bold">+</span></td>
-                    <td>{{ . }}</td>
+                    <td style="color: #A0A8B5">{{ . }}</td>
                   </tr>
                 {{ end }}
               {{ end }}
