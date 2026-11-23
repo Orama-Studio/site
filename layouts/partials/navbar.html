@@ -1,35 +1,36 @@
 <nav
   class="navbar is-fixed-top is-black is-spaced has-text-weight-extrabold"
   role="navigation"
-  aria-label="main navigation"
+  aria-label="Navigazione principale"
 >
   <div class="navbar-brand">
-    <a class="navbar-item" aria-label="Home link" href="{{ "" | relURL }}">
-      <img src="{{ "images/logo.png" | relURL }}" alt="logo" class="logo-image" />
+    <a class="navbar-item" aria-label="Torna alla homepage" href="{{ "" | relURL }}">
+      <img src="{{ "images/logo.png" | relURL }}" alt="Orama Studio" class="logo-image" />
     </a>
 
-    <a
-      role="button"
+    <button
+      type="button"
       class="navbar-burger has-text-warning"
-      aria-label="menu"
+      aria-label="Apri menu di navigazione"
       aria-expanded="false"
+      aria-controls="navbarBasicExample"
       data-target="navbarBasicExample"
     >
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
-    </a>
+    </button>
   </div>
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-end">
       <div class="navbar-item has-text-centered">
-        <a aria-label="About us link" href="#noi" class="navbar-item is-size-5">Lo studio</a>
-        <a aria-label="Services link" href="#servizi" class="navbar-item is-size-5">Servizi</a>
-        <a aria-label="Services link" href="#metodo" class="navbar-item is-size-5">Metodo</a>
-        <a aria-label="Portfolio link" href="{{ "portfolio" | relURL }}" class="navbar-item is-size-5">Portfolio</a>
-        <a aria-label="Live streaming service link" href="{{ "live-streaming" | relURL }}" class="navbar-item has-background-warning has-text-black is-size-5">Streaming</a>
+        <a href="#noi" class="navbar-item is-size-5">Lo studio</a>
+        <a href="#servizi" class="navbar-item is-size-5">Servizi</a>
+        <a href="#metodo" class="navbar-item is-size-5">Metodo</a>
+        <a href="{{ "portfolio" | relURL }}" class="navbar-item is-size-5">Portfolio</a>
+        <a href="{{ "live-streaming" | relURL }}" class="navbar-item has-background-warning has-text-black is-size-5">Streaming</a>
       </div>
     </div>
   </div>
