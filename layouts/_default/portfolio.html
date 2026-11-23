@@ -1,8 +1,47 @@
 {{ define "main" }}
 <section class="has-background-black pt-6 mt-6">
   <h1 class="is-sr-only">Portfolio video di Orama Studio</h1>
+
+  <div class="portfolio-filters buttons is-centered mb-5"
+       role="group"
+       aria-label="Filtra i lavori per categoria">
+    <button type="button" class="button is-warning" data-filter="tutti" aria-pressed="true">Tutti</button>
+    <button type="button" class="button is-dark" data-filter="cinema" aria-pressed="false">Cinema</button>
+    <button type="button" class="button is-dark" data-filter="aziende" aria-pressed="false">Video aziendali</button>
+    <button type="button" class="button is-dark" data-filter="eventi" aria-pressed="false">Eventi</button>
+    <button type="button" class="button is-dark" data-filter="videoclip" aria-pressed="false">Videoclip</button>
+  </div>
+
   <div class="fixed-grid has-1-cols-mobile has-2-cols-fullhd">
-    <div class="grid">{{ partial "portfolio_card" (index site.Data .Params.data_source) }}</div>
+    <div class="grid" id="portfolio-grid">
+      {{ partial "portfolio_card" (index site.Data .Params.data_source) }}
+    </div>
   </div>
 </section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll(".portfolio-filters button");
+  const cards = document.querySelectorAll("#portfolio-grid .portfolio-card");
+
+  buttons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      const selected = button.dataset.filter;
+
+      buttons.forEach(function (btn) {
+        const active = btn === button;
+        btn.classList.toggle("is-warning", active);
+        btn.classList.toggle("is-dark", !active);
+        btn.setAttribute("aria-pressed", String(active));
+      });
+
+      cards.forEach(function (card) {
+        const category = card.dataset.category;
+        card.hidden = selected !== "tutti" && category !== selected;
+        card.style.display = card.hidden ? "none" : "";
+      });
+    });
+  });
+});
+</script>
 {{ end }}
