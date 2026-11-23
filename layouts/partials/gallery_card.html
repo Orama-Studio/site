@@ -7,7 +7,7 @@
     {{- $first := index $images 0 -}} {{- $firstFull := resources.Get (printf
     "images/%s" $first) -}}
     <a
-      aria-label="Gallery control"
+      aria-label="Apri galleria: {{ $title }}"
       href="{{ ($firstFull | resources.Fingerprint).RelPermalink }}"
       data-pswp-src="{{ ($firstFull | resources.Fingerprint).RelPermalink }}"
       data-pswp-width="{{ $firstFull.Width }}"
@@ -22,7 +22,7 @@
     gallery selector. */ -}} {{- range after 1 $images -}} {{- $full :=
     resources.Get (printf "images/%s" .) -}}
     <a
-      aria-label="Gallery control"
+      aria-label="Immagine della galleria: {{ $title }}"
       href="{{ ($full | resources.Fingerprint).RelPermalink }}"
       data-pswp-src="{{ ($full | resources.Fingerprint).RelPermalink }}"
       data-pswp-width="{{ $full.Width }}"
@@ -31,17 +31,25 @@
     ></a>
     {{- end -}}
   </div>
+
   <div
     class="reel-details has-text-white has-background-black-bis has-text-weight-bold"
   >
-    <p class="is-size-5">
-      {{ $title }}
-      <i
-        class="bi bi-camera-fill has-text-warning reel-icon pr-1 is-size-4"
-      ></i>
-    </p>
-    <p class="is-size-6 has-text-white has-text-weight-normal">
-      {{ $subtitle }}
-    </p>
+    <a
+      href="{{ ($firstFull | resources.Fingerprint).RelPermalink }}"
+      class="has-text-white"
+      aria-label="Apri galleria: {{ $title }}"
+      onclick="event.preventDefault(); document.querySelector('#{{ $galleryId }} a').click();"
+    >
+      <p class="is-size-5">
+        {{ $title }}
+        <i
+          class="bi bi-camera-fill has-text-warning reel-icon pr-1 is-size-4"
+        ></i>
+      </p>
+      <p class="is-size-6 has-text-white has-text-weight-normal">
+        {{ $subtitle }}
+      </p>
+    </a>
   </div>
 </div>
