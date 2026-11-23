@@ -1,12 +1,10 @@
 {{ range .items }}
 <div class="cell portfolio-card">
   <a
-    href="{{ .video_link }}"
-  aria-label="Guarda il video: {{ .title }}"
+    aria-label="Guarda il video: {{ .title }}"
   class="is-size-5 has-text-white js-modal-trigger"
   data-target="playback-modal"
   data-video="{{ .video_link }}"
-  onclick="event.preventDefault()"
   >
     {{ partial "responsive_image" (dict "src" .poster_url "alt" .title "class" "portfolio-video" "widths" (slice 640 1024 1280) "sizes" "(max-width: 768px) 100vw, 50vw" "loading" "lazy" ) }}
   </a>
